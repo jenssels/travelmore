@@ -13,10 +13,13 @@ public class Boeking {
     private double prijsbetaling;
     @Column(name = "isBetaald")
     private boolean isBetaald;
+    @ManyToOne
     @JoinColumn(name = "gebruikerId")
     private Gebruiker gebruiker;
+    @ManyToOne
     @JoinColumn(name = "reisId")
     private Reis reis;
+    @ManyToOne
     @JoinColumn(name = "betalingsmiddelId")
     private Betalingsmiddel betalingsmiddel;
 

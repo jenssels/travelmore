@@ -14,10 +14,13 @@ public class Reis {
     private Date eindDatum;
     @Column(name = "prijs")
     private double prijs;
+    @ManyToOne
     @JoinColumn(name = "transportMiddelId")
     private Transportmiddel transportmiddel;
+    @ManyToOne
     @JoinColumn(name = "vertrekLocatieId")
     private Locatie vertreklocatie;
+    @ManyToOne
     @JoinColumn(name = "aankomstLocatieId")
     private Locatie aankomstlocatie;
 

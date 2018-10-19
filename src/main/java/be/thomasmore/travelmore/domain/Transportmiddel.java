@@ -11,6 +11,7 @@ public class Transportmiddel {
     private String naam;
     @Column(name = "maximumCapaciteit")
     private int maximumCapaciteit;
+    @ManyToOne
     @JoinColumn(name = "transportmiddelTypeId")
     private Transportmiddeltype transportmiddeltype;
 
