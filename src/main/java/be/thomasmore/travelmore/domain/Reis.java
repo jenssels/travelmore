@@ -1,11 +1,28 @@
 package be.thomasmore.travelmore.domain;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
 @Table(name = "reis")
+@NamedQueries(
+        {
+                @NamedQuery(
+                        name = Reis.findAll,
+                        query = "SELECT r FROM Reis r"
+                ),
+                @NamedQuery(
+                        name = Reis.searchWhere,
+                        query = "SELECT r FROM Reis r WHERE r.prijs >= :minBudget AND r.prijs < :maxBudget AND r.vertreklocatie = :locatie"
+                )
+
+        }
+)
 public class Reis {
+    public static final String findAll = "Reis.findAll";
+    public static final String searchWhere = "Reis.searchWhere";
+
     @Id
     private int id;
     @Column(name = "beginDatum")
@@ -78,5 +95,19 @@ public class Reis {
 
     public void setAankomstlocatie(Locatie aankomstlocatie) {
         this.aankomstlocatie = aankomstlocatie;
+    }
+
+    // Jens Sels - Formateer begin datum
+    public String getBeginDatumString(){
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+        return format.format(this.beginDatum);
+
+    }
+
+    // Jens Sels - Formateer eind datum
+    public String getEindDatumString(){
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+        return format.format(this.eindDatum);
+
     }
 }
