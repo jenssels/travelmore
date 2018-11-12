@@ -6,32 +6,36 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-<h:form id="registreren">
-    <p:panel id="panel" header="Form" style="margin-bottom:10px;">
-        <h:outputLabel for="gebruikerMail" value="Mail:"/>
-        <p:inputText id="gebruikerMail" value="#{registratie.newGeruiker.mail}" required="true"/>
-        <p:watermark value="mail" for="gebruikerMail"/>
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="content">
+        <h:form id="registreren">
+            <p:panel id="panel" header="Form" style="margin-bottom:10px;">
+                <h:outputLabel for="gebruikerMail" value="Mail:"/>
+                <p:inputText id="gebruikerMail" value="#{registratie.newGeruiker.mail}" required="true"/>
+                <p:watermark value="mail" for="gebruikerMail"/>
 
-        <h:outputLabel for="gebruikerNaam" value="Naam:"/>
-        <p:inputText id="gebruikerNaam" value="#{registratie.newGeruiker.naam}" required="true"/>
-        <p:watermark value="naam" for="gebruikerNaam"/>
+                <h:outputLabel for="gebruikerNaam" value="Naam:"/>
+                <p:inputText id="gebruikerNaam" value="#{registratie.newGeruiker.naam}" required="true"/>
+                <p:watermark value="naam" for="gebruikerNaam"/>
 
-        <h:outputLabel for="gebruikerWachtwoord" value="Wachtwoord:"/>
-        <p:inputText type="password" id="gebruikerWachtwoord" value="#{registratie.newGeruiker.wachtwoord}"
-                     required="true"/>
-        <p:watermark value="wachtwoord" for="gebruikerWachtwoord"/>
+                <h:outputLabel for="gebruikerWachtwoord" value="Wachtwoord:"/>
+                <p:inputText type="password" id="gebruikerWachtwoord" value="#{registratie.newGeruiker.wachtwoord}"
+                             required="true"/>
+                <p:watermark value="wachtwoord" for="gebruikerWachtwoord"/>
 
-        <h:outputLabel for="gebruikerAdres" value="Adres:"/>
-        <p:inputText id="gebruikerAdres" value="#{registratie.newGeruiker.adres}" required="true"/>
-        <p:watermark value="adres" for="gebruikerAdres"/>
+                <h:outputLabel for="gebruikerAdres" value="Adres:"/>
+                <p:inputText id="gebruikerAdres" value="#{registratie.newGeruiker.adres}" required="true"/>
+                <p:watermark value="adres" for="gebruikerAdres"/>
 
-        <h:outputLabel for="gebruikerGemeente" value="Gemeente:"/>
-        <p:inputText id="gebruikerGemeente" value="#{registratie.newGeruiker.gemeente}" required="true"/>
-        <p:watermark value="gemeente" for="gebruikerGemeente"/>
+                <h:outputLabel for="gebruikerGemeente" value="Gemeente:"/>
+                <p:inputText id="gebruikerGemeente" value="#{registratie.newGeruiker.gemeente}" required="true"/>
+                <p:watermark value="gemeente" for="gebruikerGemeente"/>
 
 
-        <h:commandButton value="Registreren" action="#{registratie.Registreren}"/>
+                <h:commandButton value="Registreren" action="#{registratie.Registreren}"/>
 
-    </p:panel>
-</h:form>
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
 </html>

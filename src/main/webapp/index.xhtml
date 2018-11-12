@@ -11,10 +11,9 @@
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
 
-            <c:if test="#{!session.getAttribute(naam).equals(null)}">
-                <p>#{session.getAttribute(naam)}</p>
+            <c:if test= '#{!session.getAttribute("naam").equals(null)} '>
+                <p>#{session.getAttribute("naam")}</p>
             </c:if>
-
             <h2>Filteren</h2>
             <h:form id="filterReizen">
                 <p:panel id="panel" header="Form">

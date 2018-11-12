@@ -30,10 +30,12 @@ public class Inloggen {
         if(gebruikerIngelogged.getMail().equals(email)  && gebruikerIngelogged.getWachtwoord().equals(wachtwoord))
         {
             boolean isAdmin = gebruikerIngelogged.getAdmin();
+            int id = gebruikerIngelogged.getId();
             String user = gebruikerIngelogged.getNaam();
             HttpSession session = SessionUtils.getSession();
             session.setAttribute("naam", user);
             session.setAttribute("isAdmin", isAdmin);
+            session.setAttribute("id", id);
 
             System.err.println("gelukt");
             return "index";
