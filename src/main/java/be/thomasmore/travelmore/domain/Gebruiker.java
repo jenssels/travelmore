@@ -1,14 +1,20 @@
 package be.thomasmore.travelmore.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
-import javax.persistence.Column;
 
 @Entity
 @Table(name = "gebruiker")
+@NamedQueries(
+        {
+                @NamedQuery(
+                        name = Gebruiker.INLOGGEN,
+                        query = "SELECT g FROM Gebruiker g WHERE g.mail = :email"
+                )
+        }
+)
 public class Gebruiker {
+    public static final String INLOGGEN = "Gebruiker.inloggen";
     @Id
     private int id;
     @Column(name = "naam")
