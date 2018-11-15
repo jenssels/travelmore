@@ -10,7 +10,7 @@ import java.util.Date;
         {
                 @NamedQuery(
                         name = Reis.findAll,
-                        query = "SELECT r FROM Reis r"
+                        query = "SELECT r FROM Reis r WHERE r.beginDatum >= :datum"
                 ),
                 @NamedQuery(
                         name = Reis.searchWhere,

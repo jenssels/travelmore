@@ -6,6 +6,7 @@ import be.thomasmore.travelmore.repository.ReisRepository;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import java.util.Date;
 import java.util.List;
 
 @Stateless
@@ -29,8 +30,8 @@ public class ReisService {
         return reis;
     }
 
-    public List<Reis> findAllReizenSearch(Double budget, Locatie locatie){
+    public List<Reis> findAllReizenSearch(Double budget, Locatie vertrekLocatie, Locatie bestemming, Date startDatum, Date eindDatum){
         // Jens Sels - Lege inputs opvangen en opvullen
-        return reisRepository.zoek(budget, locatie);
+        return reisRepository.zoek(budget, vertrekLocatie, bestemming, startDatum, eindDatum);
     }
 }

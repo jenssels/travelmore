@@ -10,7 +10,6 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-
             <h2>Filteren</h2>
             <h:form id="filterReizen">
                 <p:panel id="panel" header="Form">
@@ -22,6 +21,15 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
                             <f:selectItem itemLabel="Alle locaties" noSelectionOption="true" />
                             <f:selectItems value="#{locatieController.locaties}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
                         </h:selectOneMenu>
+                        <h:outputLabel for="bestemming" value="Bestemming:" />
+                        <h:selectOneMenu id="bestemming" value="#{reisController.zoekBestemming}" converter="omnifaces.SelectItemsConverter">
+                            <f:selectItem itemLabel="Alle locaties" noSelectionOption="true" />
+                            <f:selectItems value="#{locatieController.locaties}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
+                        </h:selectOneMenu>
+                        <p:outputLabel for="startDatum" value="Start datum:" />
+                        <p:calendar id="startDatum" value="#{reisController.zoekStartDatum}" pattern="dd-MM-yyyy" mask="true" />
+                        <p:outputLabel for="eindDatum" value="Eind datum:" />
+                        <p:calendar id="eindDatum" value="#{reisController.zoekEindDatum}" pattern="dd-MM-yyyy" mask="true" />
                         <h:commandButton value="Zoeken" action="#{reisController.zoek()}"  />
                     </h:panelGrid>
                 </p:panel>

@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Date;
 
 @ManagedBean
 @ViewScoped
@@ -27,6 +28,10 @@ public class ReisController {
     private Locatie zoekVertrekLocatie;
 
     private Locatie zoekBestemming;
+
+    private Date zoekStartDatum;
+
+    private Date zoekEindDatum;
 
     // Jens Sels - Ophalen van alle reizen on page load en initializeren van variablen.
     @PostConstruct
@@ -46,7 +51,7 @@ public class ReisController {
 
     // Jens Sels - Ophalen van alle reizen gebaseerd op de zoek criteria
     public void zoek(){
-        this.reizen = this.reisService.findAllReizenSearch(this.zoekBudget, this.zoekVertrekLocatie);
+        this.reizen = this.reisService.findAllReizenSearch(this.zoekBudget, this.zoekVertrekLocatie, this.zoekBestemming, this.zoekStartDatum, this.zoekEindDatum);
     }
 
     // Getters and Setters
@@ -66,6 +71,22 @@ public class ReisController {
         this.zoekVertrekLocatie = zoekVertrekLocatie;
     }
 
+    public Date getZoekEindDatum() {
+        return zoekEindDatum;
+    }
+
+    public void setZoekEindDatum(Date zoekEindDatum) {
+        this.zoekEindDatum = zoekEindDatum;
+    }
+
+    public Date getZoekStartDatum() {
+        return zoekStartDatum;
+    }
+
+    public void setZoekStartDatum(Date zoekStartDatum) {
+        this.zoekStartDatum = zoekStartDatum;
+    }
+
     public Locatie getZoekBestemming() {
         return zoekBestemming;
     }
@@ -73,4 +94,5 @@ public class ReisController {
     public void setZoekBestemming(Locatie zoekBestemming) {
         this.zoekBestemming = zoekBestemming;
     }
+
 }
