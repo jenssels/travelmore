@@ -1,0 +1,13 @@
+be\thomasmore\travelmore\domain\Betalingsmiddel.class
+be\thomasmore\travelmore\domain\Boeking.class
+be\thomasmore\travelmore\domain\Transportmiddel.class
+be\thomasmore\travelmore\repository\LocatieRepository.class
+be\thomasmore\travelmore\controller\ReisController.class
+be\thomasmore\travelmore\controller\LocatieController.class
+be\thomasmore\travelmore\domain\Gebruiker.class
+be\thomasmore\travelmore\service\ReisService.class
+be\thomasmore\travelmore\domain\Transportmiddeltype.class
+be\thomasmore\travelmore\service\LocatieService.class
+be\thomasmore\travelmore\repository\ReisRepository.class
+be\thomasmore\travelmore\domain\Locatie.class
+be\thomasmore\travelmore\domain\Reis.class
