@@ -18,4 +18,9 @@ public class GebruikerRepository {
 
         entityManager.persist(gebruiker);
     }
+
+    // Jens Sels - Ophalen van gebruiker via ID
+    public Gebruiker findById(int id){
+        return entityManager.find(Gebruiker.class, id);
+    }
 }

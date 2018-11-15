@@ -2,6 +2,7 @@ package be.thomasmore.travelmore.repository;
 
 import be.thomasmore.travelmore.domain.Locatie;
 import be.thomasmore.travelmore.domain.Reis;
+import be.thomasmore.travelmore.domain.Transportmiddeltype;
 
 import javax.persistence.*;
 import java.util.*;
@@ -24,7 +25,7 @@ public class ReisRepository {
     }
 
     // Jens Sels - Ophalen van alle reizen gebaseerd op de zoek criteria
-    public List<Reis> zoek(Double budget, Locatie vertreklocatie, Locatie bestemming, Date startDatum, Date eindDatum){
+    public List<Reis> zoek(Double budget, Locatie vertreklocatie, Locatie bestemming, Date startDatum, Date eindDatum, Transportmiddeltype transportmiddeltype){
         Map<String, Object> paramaterMap = new HashMap<String, Object>();
         List<String> whereCause = new ArrayList<String>();
 
@@ -58,6 +59,11 @@ public class ReisRepository {
         if (eindDatum != null && eindDatum.compareTo(datumNu) > 0){
             whereCause.add(" r.eindDatum <= :eindDatum ");
             paramaterMap.put("eindDatum", eindDatum);
+        }
+
+        if (transportmiddeltype != null){
+            whereCause.add(" r.transportmiddel.transportmiddeltype = :transportmiddeltype ");
+            paramaterMap.put("transportmiddeltype", transportmiddeltype);
         }
 
         if (!whereCause.isEmpty()) {

@@ -1,10 +1,24 @@
 package be.thomasmore.travelmore.domain;
 
 import javax.persistence.*;
-
+@NamedQueries(
+        {
+                @NamedQuery(
+                        name = Boeking.findAllForGebruiker,
+                        query = "SELECT b FROM Boeking b where b.gebruiker = :gebruiker"
+                ),
+                @NamedQuery(
+                        name = Boeking.getCountWhereReis,
+                        query = "SELECT count(b) FROM Boeking b where b.reis = :reis"
+                )
+        }
+)
 @Entity
 @Table(name = "boeking")
 public class Boeking {
+    public static final String findAllForGebruiker = "Boeking.findAllForGebruiker";
+    public static final String getCountWhereReis = "Boeking.getCountWhereReis";
+
     @Id
     private int id;
     @Column(name = "aantalPersonen")
@@ -77,5 +91,18 @@ public class Boeking {
 
     public void setBetalingsmiddel(Betalingsmiddel betalingsmiddel) {
         this.betalingsmiddel = betalingsmiddel;
+    }
+
+    public Double getTotaalPrijs(){
+        return this.prijsbetaling * aantalPersonen;
+    }
+
+    public String betalingInorde(){
+        if (this.isBetaald){
+            return "Betaald";
+        }
+        else{
+            return "Nog niet betaald";
+        }
     }
 }

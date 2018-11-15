@@ -10,10 +10,9 @@
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <c:if test= '#{!session.getAttribute("naam").equals(null)} '>
+            <c:if test='#{session.getAttribute("naam") != null}'>
                 <p>#{session.getAttribute("naam")}</p>
             </c:if>
-            <p>#{session.getAttribute("naam")}</p>
             <h2>Filteren</h2>
             <h:form id="filterReizen">
                 <p:panel id="panel" header="Form">
@@ -34,7 +33,13 @@
                         <p:calendar id="startDatum" value="#{reisController.zoekStartDatum}" pattern="dd-MM-yyyy" mask="true" />
                         <p:outputLabel for="eindDatum" value="Eind datum:" />
                         <p:calendar id="eindDatum" value="#{reisController.zoekEindDatum}" pattern="dd-MM-yyyy" mask="true" />
+                        <h:outputLabel for="transportType" value="Transport type:" />
+                        <h:selectOneMenu id="transportType" value="#{reisController.zoekTransportMiddelType}" converter="omnifaces.SelectItemsConverter">
+                            <f:selectItem itemLabel="Alle transport types" noSelectionOption="true" />
+                            <f:selectItems value="#{transportmiddeltypeController.transportmiddeltypes}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
+                        </h:selectOneMenu>
                         <h:commandButton value="Zoeken" action="#{reisController.zoek()}"  />
+                        <h:commandButton value="Reset" action="#{reisController.reset()}"  />
                     </h:panelGrid>
                 </p:panel>
             </h:form>
@@ -59,6 +64,15 @@
                 <p:column headerText="Prijs per persoon">
                     <h:outputText value="€#{reis.prijs}" />
                 </p:column>
+                <p:column headerText="Vrije plaasten">
+                    <h:outputText value="#{reisController.getVrijePlaatsen(reis.id)}" />
+                </p:column>
+                 <p:column headerText="Boeking">
+                     <h:form id="boekingForm">
+                         <h:commandButton value="Boeken"  rendered='#{session.getAttribute("naam") != null and reisController.getVrijePlaatsen(reis.id) > 0}' action="#{boekingController.boekingForm(reis.id)}"  />
+                         <h:outputText rendered='#{session.getAttribute("naam") == null}' value="U moet ingelogd zijn voor deze actie" />
+                     </h:form>
+                 </p:column>
             </p:dataTable>
 
         </ui:define>

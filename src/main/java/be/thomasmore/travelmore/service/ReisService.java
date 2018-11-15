@@ -2,6 +2,8 @@ package be.thomasmore.travelmore.service;
 
 import be.thomasmore.travelmore.domain.Locatie;
 import be.thomasmore.travelmore.domain.Reis;
+import be.thomasmore.travelmore.domain.Transportmiddel;
+import be.thomasmore.travelmore.domain.Transportmiddeltype;
 import be.thomasmore.travelmore.repository.ReisRepository;
 
 import javax.ejb.Stateless;
@@ -30,8 +32,8 @@ public class ReisService {
         return reis;
     }
 
-    public List<Reis> findAllReizenSearch(Double budget, Locatie vertrekLocatie, Locatie bestemming, Date startDatum, Date eindDatum){
+    public List<Reis> findAllReizenSearch(Double budget, Locatie vertrekLocatie, Locatie bestemming, Date startDatum, Date eindDatum, Transportmiddeltype transportmiddeltype){
         // Jens Sels - Lege inputs opvangen en opvullen
-        return reisRepository.zoek(budget, vertrekLocatie, bestemming, startDatum, eindDatum);
+        return reisRepository.zoek(budget, vertrekLocatie, bestemming, startDatum, eindDatum, transportmiddeltype);
     }
 }

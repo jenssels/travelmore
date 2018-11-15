@@ -15,4 +15,8 @@ public class GebruikerService {
     public void insert(Gebruiker gebruiker){
         gebruikerRepository.insert(gebruiker);
     }
+
+    public Gebruiker findById(int id){
+        return gebruikerRepository.findById(id);
+    }
 }

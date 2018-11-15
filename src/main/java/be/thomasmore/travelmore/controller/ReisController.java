@@ -2,6 +2,8 @@ package be.thomasmore.travelmore.controller;
 
 import be.thomasmore.travelmore.domain.Locatie;
 import be.thomasmore.travelmore.domain.Reis;
+import be.thomasmore.travelmore.domain.Transportmiddeltype;
+import be.thomasmore.travelmore.service.BoekingService;
 import be.thomasmore.travelmore.service.ReisService;
 
 
@@ -20,6 +22,9 @@ public class ReisController {
     @Inject
     private ReisService reisService;
 
+    @Inject
+    private BoekingService boekingService;
+
     // Jens Sels - Variabelen voor het filteren op reizen
     private Double zoekBudget;
 
@@ -33,11 +38,12 @@ public class ReisController {
 
     private Date zoekEindDatum;
 
-    // Jens Sels - Ophalen van alle reizen on page load en initializeren van variablen.
+    private Transportmiddeltype zoekTransportMiddelType;
+
+    // Jens Sels - Ophalen van alle reizen on page load
     @PostConstruct
     public void init(){
         this.reizen = this.reisService.findAllReizen();
-        this.zoekBudget = 0.0;
     }
 
 
@@ -51,7 +57,28 @@ public class ReisController {
 
     // Jens Sels - Ophalen van alle reizen gebaseerd op de zoek criteria
     public void zoek(){
-        this.reizen = this.reisService.findAllReizenSearch(this.zoekBudget, this.zoekVertrekLocatie, this.zoekBestemming, this.zoekStartDatum, this.zoekEindDatum);
+        this.reizen = this.reisService.findAllReizenSearch(this.zoekBudget, this.zoekVertrekLocatie, this.zoekBestemming, this.zoekStartDatum, this.zoekEindDatum, this.zoekTransportMiddelType);
+    }
+
+    public int getVrijePlaatsen(int id){
+        Reis reis = reisService.findReisById(id);
+        if (reis != null){
+            int vrijePlaatsen = boekingService.getCountWhereReis(reis);
+            return reis.getTransportmiddel().getMaximumCapaciteit() - vrijePlaatsen;
+        }
+        return 0;
+    }
+
+    // Jens Sels - Resetten van alle zoek criteria
+    public void reset(){
+        this.zoekBudget = null;
+        this.zoekVertrekLocatie = null;
+        this.zoekBestemming = null;
+        this.zoekStartDatum = null;
+        this.zoekEindDatum = null;
+        this.zoekTransportMiddelType = null;
+
+        this.zoek();
     }
 
     // Getters and Setters
@@ -95,4 +122,11 @@ public class ReisController {
         this.zoekBestemming = zoekBestemming;
     }
 
+    public Transportmiddeltype getZoekTransportMiddelType() {
+        return zoekTransportMiddelType;
+    }
+
+    public void setZoekTransportMiddelType(Transportmiddeltype zoekTransportMiddelType) {
+        this.zoekTransportMiddelType = zoekTransportMiddelType;
+    }
 }
