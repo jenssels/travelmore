@@ -10,9 +10,7 @@
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <c:if test='#{session.getAttribute("naam") != null}'>
-                <p>#{session.getAttribute("naam")}</p>
-            </c:if>
+            <h:outputLabel rendered='#{session.getAttribute("naam").toString() != null}'>Welkom #{session.getAttribute("naam")}</h:outputLabel>
             <h2>Filteren</h2>
             <h:form id="filterReizen">
                 <p:panel id="panel" header="Form">
