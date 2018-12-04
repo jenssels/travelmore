@@ -50,6 +50,6 @@ public class Inloggen {
     public String logout() {
         HttpSession session = SessionUtils.getSession();
         session.invalidate();
-        return "uitgelogged";
+        return "uitgelogd";
     }
 }

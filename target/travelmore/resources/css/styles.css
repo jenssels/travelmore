@@ -1,0 +1,21 @@
+:root {
+    --main-bg-color: white;
+    --main-txt-color: #191A1D;
+    --main-offset-color: #153E5C;
+    --main-highlight-color: #F2BE54;
+    --main-softhighlight-color: #CDD4CA;
+    --main-middle-color: #87AEB4;
+    --main-font: Arial;
+}
+
+h2 {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-family: var(--main-font);
+}
+
+h3 {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-family: var(--main-font);
+}
