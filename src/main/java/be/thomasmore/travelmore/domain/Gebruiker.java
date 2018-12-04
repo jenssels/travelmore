@@ -1,6 +1,8 @@
 package be.thomasmore.travelmore.domain;
 
+import javax.ejb.TransactionManagement;
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -10,11 +12,16 @@ import javax.validation.constraints.Size;
                 @NamedQuery(
                         name = Gebruiker.INLOGGEN,
                         query = "SELECT g FROM Gebruiker g WHERE g.mail = :email"
+                ),
+                @NamedQuery(
+                        name = Gebruiker.FIND_ALL,
+                        query = "SELECT g FROM Gebruiker g"
                 )
         }
 )
 public class Gebruiker {
     public static final String INLOGGEN = "Gebruiker.inloggen";
+    public static final String FIND_ALL = "Gebruiker.findAll";
     @Id
     private int id;
     @Column(name = "naam")
