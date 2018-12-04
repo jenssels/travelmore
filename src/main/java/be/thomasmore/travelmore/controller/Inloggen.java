@@ -50,6 +50,12 @@ public class Inloggen {
     public String logout() {
         HttpSession session = SessionUtils.getSession();
         session.invalidate();
-        return "uitgelogd";
+
+        System.err.println("FUBAR");
+        return "uitgelogged";
+    }
+
+    public String backHome(){
+        return "index";
     }
 }

@@ -15,12 +15,63 @@
         <p:growl id="messages"/>
 
         <p:menubar>
+<<<<<<< HEAD
             <p:menuitem value="Home" url="../travelmore/index.xhtml" icon="ui-icon-home" />
             <p:menuitem value="Registreren" url="../travelmore/registreren.xhtml" icon="ui-icon-pencil" />
             <p:menuitem value="Login" url="../travelmore/inloggen.xhtml" icon="ui-icon-person" />
             <c:if test='#{session.getAttribute("naam") != null}'>
                 <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-document" />
                 <p:menuitem value="Uitloggen" action="#{inloggen.logout()}"/>
+=======
+            <p:submenu label="File" icon="ui-icon-document">
+                <p:submenu label="New" icon="ui-icon-contact">
+                    <p:menuitem value="Project" url="#" />
+                    <p:menuitem value="Other" url="#" />
+                </p:submenu>
+                <p:menuitem value="Open" url="#" />
+                <p:separator />
+                <p:menuitem value="Quit" url="#" />
+            </p:submenu>
+
+            <p:submenu label="Edit" icon="ui-icon-pencil">
+                <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+                <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+            </p:submenu>
+
+            <p:submenu label="Help" icon="ui-icon-help">
+                <p:menuitem value="Contents" url="#" />
+                <p:submenu label="Search" icon="ui-icon-search">
+                    <p:submenu label="Text">
+                        <p:menuitem value="Workspace" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="File" url="#" />
+                </p:submenu>
+            </p:submenu>
+
+            <p:submenu label="Actions" icon="ui-icon-gear">
+                <p:submenu label="Ajax" icon="ui-icon-refresh">
+                    <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-disk" update="messages"/>
+                    <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-arrowrefresh-1-w" update="messages"/>
+                </p:submenu>
+                <p:submenu label="Non-Ajax" icon="ui-icon-newwin">
+                    <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
+                </p:submenu>
+            </p:submenu>
+
+            <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
+            <c:if test='#{session.getAttribute("naam") != null}'>
+                <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-arrowrefresh-1-w" />
+            </c:if>
+            <c:if test='#{session.getAttribute("isAdmin") == true}'>
+                <p:menuitem value="Gebruikers beheren" url="../travelmore/gebruikersOverzicht.xhtml" icon="ui-icon-arrowrefresh-1-w" />
+            </c:if>
+            <c:if test='#{session.getAttribute("naam") == null}'>
+            <p:menuitem value="Registreren" url="../travelmore/registreren.xhtml" icon="ui-icon-close" />
+            <p:menuitem value="Login" url="../travelmore/inloggen.xhtml" icon="ui-icon-close" />
+            </c:if>
+            <c:if test='#{session.getAttribute("naam") != null}'>
+                <p:menuitem value="Logout" url="../travelmore/uitloggen.xhtml" icon="ui-icon-arrowrefresh-1-w" />
+>>>>>>> 5d967cc4fa3f63a83c63aacfc4df9ae4c713640e
             </c:if>
         </p:menubar>
         <br />

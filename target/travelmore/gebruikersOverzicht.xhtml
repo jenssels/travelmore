@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h3>Wilt u uit loggen</h3>
+<h:form>
+
+    <ul>
+    <ui:repeat value="#{gebruikerController.gebruikers}" var="m">
+        <li> #{m.naam}: <h:commandLink value="Verander de admin status" action="#{gebruikerController.maakAdmin(!m.admin, m.id)}"/></li>
+    </ui:repeat>
+    </ul>
+</h:form>
+<a href="index.xhtml">home</a>
+</html>
