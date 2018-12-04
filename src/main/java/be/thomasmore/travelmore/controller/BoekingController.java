@@ -13,6 +13,15 @@ import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 @ManagedBean
 @SessionScoped
@@ -85,7 +94,54 @@ public class BoekingController {
         this.boeking.setBetaald(true);
 
         this.boekingService.updateBoeking(this.boeking);
+        this.stuurBevestigMail();
         return "mijnBoekingen";
+    }
+
+    public void stuurBevestigMail(){
+        String mailString = "U hebt u reis succesvol betaald met " + this.betalingsmiddel.getNaam() + "\r\n";
+        mailString += "\r\n Reis gegevens:";
+        mailString += "\r\n Vertrek datum: " + this.boeking.getReis().getBeginDatumString();
+        mailString += "\r\n Terugkomst datum: " + this.boeking.getReis().getEindDatumString();
+        mailString += "\r\n Vertrek locatie: " + this.boeking.getReis().getVertreklocatie().getNaam();
+        mailString += "\r\n Terugkomst locatie: " + this.boeking.getReis().getAankomstlocatie().getNaam();
+        mailString += "\r\n Transportmiddel: " + this.boeking.getReis().getTransportmiddel().getNaam();
+        mailString += "\r\n Aantal Personen: " + this.boeking.getAantalPersonen();
+        mailString += "\r\n Totaal prijs: €" + this.boeking.getTotaalPrijs();
+        Gebruiker gebruiker = gebruikerService.findById((int)session.getAttribute("id"));
+        if (gebruiker != null){
+            stuurMail(mailString, gebruiker.getMail());
+        }
+    }
+
+    // Jens Sels - Mail versturen
+    private void stuurMail(String mailBody, String emailTo){
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication("selssysteemmail@gmail.com", "Sels1998");
+                    }
+                });
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("SelsSysteemMail@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO,
+                    InternetAddress.parse(emailTo));
+            message.setSubject("Reis bevestiging");
+            message.setText(mailBody);
+
+            Transport.send(message);
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // Jens Sels - Verwijderen van een boeking
