@@ -19,3 +19,6 @@ h3 {
     color: var(--main-txt-color);
     font-family: var(--main-font);
 }
+.sso_header .ui-menuitem.ui-widget.ui-corner-all:last-child {
+      float: right;
+}

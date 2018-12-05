@@ -13,8 +13,11 @@
 <ui:composition>
     <h:form>
         <p:growl id="messages"/>
+        <p:menubar  styleClass="sso_header ui-widget-header ">
 
-        <p:menubar>
+            <p:menuitem>
+                <p:graphicImage name="/images/navbarlogo.png" alt="travelmore" height="20" />
+            </p:menuitem>
 
             <p:menuitem value="Home" url="../travelmore/index.xhtml" icon="ui-icon-home" />
 
@@ -23,17 +26,16 @@
                 <p:menuitem value="Login" url="../travelmore/inloggen.xhtml" icon="ui-icon-close" />
             </c:if>
 
-            <c:if test='#{session.getAttribute("naam") != null}'>
-                <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-document" />
-            </c:if>
-
             <c:if test='#{session.getAttribute("isAdmin") == true}'>
                 <p:menuitem value="Gebruikers beheren" url="../travelmore/gebruikersOverzicht.xhtml" icon="ui-icon-person" />
             </c:if>
 
             <c:if test='#{session.getAttribute("naam") != null}'>
-                <p:menuitem>Welkom #{session.getAttribute("naam")}</p:menuitem>
-                <p:menuitem value="Logout" url="../travelmore/uitloggen.xhtml" icon="ui-icon-arrowrefresh-1-w" class="test"/>
+                <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-document" />
+            </c:if>
+
+            <c:if test='#{session.getAttribute("naam") != null}'>
+                <p:menuitem value="Logout" url="../travelmore/uitloggen.xhtml" icon="ui-icon-arrowrefresh-1-w"></p:menuitem>
             </c:if>
 
         </p:menubar>
