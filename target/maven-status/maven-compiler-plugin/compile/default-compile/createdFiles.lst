@@ -2,6 +2,7 @@ be\thomasmore\travelmore\repository\TransportmiddeltypeRepository.class
 be\thomasmore\travelmore\domain\Transportmiddel.class
 be\thomasmore\travelmore\repository\InlogRepository.class
 be\thomasmore\travelmore\controller\GebruikerController.class
+be\thomasmore\travelmore\rest\LocationRestService.class
 be\thomasmore\travelmore\controller\BoekingController.class
 be\thomasmore\travelmore\controller\BetalingsmiddelController.class
 be\thomasmore\travelmore\repository\BetalingsmiddelRepository.class

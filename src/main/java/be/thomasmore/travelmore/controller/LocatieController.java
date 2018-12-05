@@ -12,11 +12,26 @@ import java.util.List;
 @ViewScoped
 public class LocatieController {
 
+    private Locatie newLocation = new Locatie();
+
     @Inject
     private LocatieService locatieService;
 
     // Jens Sels - Ophalen van alle locaties
     public List<Locatie> getLocaties(){
         return locatieService.findAllLocaties();
+    }
+
+    // Jolien Lauwers
+    public void setNewLocation(Locatie newLocation) {
+        this.newLocation = newLocation;
+    }
+
+    public List<Locatie> getLocations(){
+        return this.locatieService.findAllLocaties();
+    }
+
+    public void submit(){
+        this.locatieService.insert(newLocation);
     }
 }

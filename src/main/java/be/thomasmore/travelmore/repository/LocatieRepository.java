@@ -15,4 +15,15 @@ public class LocatieRepository {
     public List<Locatie> findAll(){
         return entityManager.createNamedQuery(Locatie.findAll, Locatie.class).getResultList();
     }
+
+    // Jolien Lauwers - Zoek locatie via id
+    public Locatie findById(int id) {
+        return entityManager.find(Locatie.class, id);
+    }
+
+    // Jolien Lauwers - Voeg locatie toe
+    public void insert(Locatie locatie) {
+        entityManager.persist(locatie);
+        entityManager.flush();
+    }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\domain\Reis.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\TransportmiddeltypeRepository.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\controller\Inloggen.java
@@ -22,41 +21,11 @@ C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\domain\Locatie
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\service\ReisService.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\ReisRepository.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\LocatieRepository.java
+C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\rest\LocationRestService.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\controller\LocatieController.java
+C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\controller\GebruikerController.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\BetalingsmiddelRepository.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\service\BoekingService.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\domain\Transportmiddel.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\service\BetalingsmiddelService.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\GebruikerRepository.java
-=======
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\ReisService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\TransportmiddeltypeController.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\BoekingController.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\BoekingService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\InlogRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\InlogService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\ReisController.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\Registratie.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\BetalingsmiddelService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\LocatieRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\LocatieService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\BetalingsmiddelRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Betalingsmiddel.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\ReisRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\LocatieController.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\GebruikerService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\Inloggen.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\service\TransportmiddeltypeService.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Locatie.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Reis.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\TransportmiddeltypeRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Transportmiddeltype.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Gebruiker.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\BoekingRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Boeking.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\domain\Transportmiddel.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\repository\GebruikerRepository.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\BetalingsmiddelController.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\SessionUtils.java
-C:\dev\projects\project java\travelmore\src\main\java\be\thomasmore\travelmore\controller\GebruikerController.java
->>>>>>> 5d967cc4fa3f63a83c63aacfc4df9ae4c713640e
