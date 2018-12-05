@@ -5,6 +5,8 @@ import be.thomasmore.travelmore.service.GebruikerService;
 import com.sun.mail.util.BASE64DecoderStream;
 import com.sun.mail.util.BASE64EncoderStream;
 import java.io.*;
+import javax.annotation.Resource;
+import javax.annotation.Resources;
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
@@ -22,48 +24,48 @@ import java.security.NoSuchAlgorithmException;
 public class Registratie {
 
     private Gebruiker newGeruiker = new Gebruiker();
-//    private static Cipher ecipher;
-//    private static Cipher dcipher;
+    private static Cipher ecipher;
+    private static Cipher dcipher;
 
     @Inject
     private GebruikerService gebruikerService;
-//    private static SecretKey key = null;
+    private static SecretKey key = null;
 
-//    public Registratie() {
-//
-//        try {
-//            FileInputStream fileIn = new FileInputStream("travelmore/src/main/resources/key.ser");
-//            ObjectInputStream in = new ObjectInputStream(fileIn);
-//            key = (SecretKey) in.readObject();
-//            in.close();
-//            fileIn.close();
-//
-//
-//            ecipher = Cipher.getInstance("DES");
-//            dcipher = Cipher.getInstance("DES");
-//
-//            ecipher.init(Cipher.ENCRYPT_MODE, key);
-//            dcipher.init(Cipher.DECRYPT_MODE, key);
-//
-//        } catch (InvalidKeyException e) {
-//            System.out.println("Invalid Key:" + e.getMessage());
-//            return;
-//
-//        } catch (NoSuchPaddingException e) {
-//            System.out.println("No Such Padding:" + e.getMessage());
-//            return;
-//
-//        } catch (NoSuchAlgorithmException e) {
-//            System.out.println("No Such Algorithm:" + e.getMessage());
-//            return;
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public Registratie() {
+
+        try {
+            InputStream fileIn = getClass().getResourceAsStream("/key.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            key = (SecretKey) in.readObject();
+            in.close();
+            fileIn.close();
+
+
+            ecipher = Cipher.getInstance("DES");
+            dcipher = Cipher.getInstance("DES");
+
+            ecipher.init(Cipher.ENCRYPT_MODE, key);
+            dcipher.init(Cipher.DECRYPT_MODE, key);
+
+        } catch (InvalidKeyException e) {
+            System.out.println("Invalid Key:" + e.getMessage());
+            return;
+
+        } catch (NoSuchPaddingException e) {
+            System.out.println("No Such Padding:" + e.getMessage());
+            return;
+
+        } catch (NoSuchAlgorithmException e) {
+            System.out.println("No Such Algorithm:" + e.getMessage());
+            return;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public Gebruiker getNewGeruiker() {
@@ -88,32 +90,32 @@ public class Registratie {
         return "index";
     }
 
-//    public static String encrypt(String wachtwoord){
-//        try {
-//            byte[] utf8 = wachtwoord.getBytes("UTF8");
-//            byte[] enc = ecipher.doFinal(utf8);
-//
-//            enc = BASE64EncoderStream.encode(enc);
-//
-//            return new String(enc);
-//        }
-//        catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
-//
-//    public static String decrypt(String wachtwoord){
-//        try {
-//            byte [] dec = BASE64DecoderStream.decode(wachtwoord.getBytes());
-//            byte [] utf8 = dcipher.doFinal(dec);
-//
-//            return new String(utf8, "UTF8");
-//        }
-//        catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
+    public static String encrypt(String wachtwoord){
+        try {
+            byte[] utf8 = wachtwoord.getBytes("UTF8");
+            byte[] enc = ecipher.doFinal(utf8);
+
+            enc = BASE64EncoderStream.encode(enc);
+
+            return new String(enc);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String decrypt(String wachtwoord){
+        try {
+            byte [] dec = BASE64DecoderStream.decode(wachtwoord.getBytes());
+            byte [] utf8 = dcipher.doFinal(dec);
+
+            return new String(utf8, "UTF8");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -5,7 +5,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
-//import static be.thomasmore.travelmore.controller.Registratie.decrypt;
+import static be.thomasmore.travelmore.controller.Registratie.decrypt;
 
 //Wouter De Laet inloggens
 @ManagedBean
@@ -21,11 +21,11 @@ public class Inloggen {
     {
         gebruikerIngelogged = this.inlogService.inloggen(email);
 
-//        String decrypted = decrypt(gebruikerIngelogged.getWachtwoord());
+        String decrypted = decrypt(gebruikerIngelogged.getWachtwoord());
 
         System.err.println(gebruikerIngelogged.getMail());
         System.err.println(email);
-//        System.err.println(decrypted);
+        System.err.println(decrypted);
         System.err.println(wachtwoord);
         if(gebruikerIngelogged.getMail().equals(email)  && gebruikerIngelogged.getWachtwoord().equals(wachtwoord))
         {
