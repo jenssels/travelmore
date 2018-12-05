@@ -22,9 +22,19 @@
                     <li class="nav-item">
                         <h:commandLink class="nav-link" action="index">Home</h:commandLink>
                     </li>
+                    <c:if test='#{session.getAttribute("naam") == null}'>
+                        <li class="nav-item">
+                            <h:commandLink class="nav-link" action="registreren.xhtml">Registreren</h:commandLink>
+                        </li>
+                    </c:if>
+                    <c:if test='#{session.getAttribute("naam") != null}'>
+                        <li class="nav-item">
+                            <h:commandLink class="nav-link" action="mijnBoekingen.xhtml">Mijn boekingen</h:commandLink>
+                        </li>
+                    </c:if>
                     <c:if test='#{session.getAttribute("isAdmin") == true}'>
                         <li class="nav-item">
-                            <h:commandLink class="nav-link" action="reizenAdmin">Beheren</h:commandLink>
+                            <h:commandLink class="nav-link" action="gebruikersOverzicht.xhtml">Gebruikers beheren</h:commandLink>
                         </li>
                     </c:if>
                 </ul>
@@ -32,10 +42,10 @@
                 <ul class="navbar-nav">
                     <c:if test='#{session.getAttribute("naam") != null}'>
                         <li class="nav-item">
-                            <span class="navbar-text">test</span>
+                            <span class="navbar-text">Welkom, #{session.getAttribute("naam")}!</span>
                         </li>
                         <li class="nav-item">
-                            <h:commandLink class="nav-link">Afmelden</h:commandLink>
+                            <h:commandLink class="nav-link" action="uitloggen.xhtml">Afmelden</h:commandLink>
                         </li>
                     </c:if>
                     <c:if test='#{session.getAttribute("naam") == null}'>
