@@ -1,5 +1,10 @@
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\domain\Reis.java
+<<<<<<< HEAD
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\domain\Locatie.java
+=======
+C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\controller\ImagesView.java
+C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\repository\TransportmiddeltypeRepository.java
+>>>>>>> f3b05622979bbf5638067bb0b4b19a81f14d68f9
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\controller\Inloggen.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\service\GebruikerService.java
 C:\dev\projects\travelmore\src\main\java\be\thomasmore\travelmore\service\InlogService.java

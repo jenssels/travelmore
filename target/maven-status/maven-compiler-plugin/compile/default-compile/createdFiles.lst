@@ -9,5 +9,22 @@ be\thomasmore\travelmore\service\GebruikerService.class
 be\thomasmore\travelmore\controller\Inloggen.class
 be\thomasmore\travelmore\controller\Registratie.class
 be\thomasmore\travelmore\domain\Locatie.class
+<<<<<<< HEAD
+=======
+be\thomasmore\travelmore\domain\Betalingsmiddel.class
+be\thomasmore\travelmore\domain\Boeking.class
+be\thomasmore\travelmore\service\BetalingsmiddelService.class
+be\thomasmore\travelmore\repository\GebruikerRepository.class
+be\thomasmore\travelmore\repository\LocatieRepository.class
+be\thomasmore\travelmore\controller\ReisController.class
+be\thomasmore\travelmore\controller\LocatieController.class
+be\thomasmore\travelmore\domain\Gebruiker.class
+be\thomasmore\travelmore\service\ReisService.class
+be\thomasmore\travelmore\service\LocatieService.class
+be\thomasmore\travelmore\controller\Inloggen.class
+be\thomasmore\travelmore\repository\BoekingRepository.class
+be\thomasmore\travelmore\service\BoekingService.class
+be\thomasmore\travelmore\controller\ImagesView.class
+>>>>>>> f3b05622979bbf5638067bb0b4b19a81f14d68f9
 be\thomasmore\travelmore\domain\Reis.class
 be\thomasmore\travelmore\service\InlogService.class
