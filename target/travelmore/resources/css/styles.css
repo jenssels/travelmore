@@ -8,43 +8,9 @@
     --main-font: Arial;
 }
 
-h2 {
-    background-color: var(--main-bg-color);
-    color: var(--main-txt-color);
-    font-family: var(--main-font);
-}
-
-h3 {
-    background-color: var(--main-bg-color);
-    color: var(--main-txt-color);
-    font-family: var(--main-font);
-}
-.sso_header .ui-menuitem.ui-widget.ui-corner-all:last-child {
-      float: right;
-}
-.mainpage{
-    background: url("#{request.contextPath}/resources/images/travel.jpg") no-repeat center fixed;
+.test {
+    background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
     background-size: cover;
-    min-height: calc(100vh - 56px);
-}
-
-#logincard{
-    width: 75vw;
-    max-width: 310px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: calc((50vh - 7.175rem));
-    left: 50%;
-}
-
-input{
-    box-shadow: none !important;
-}
-
-.error{
-    color: red !important;
-}
-
-.tijdInfo{
-    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
