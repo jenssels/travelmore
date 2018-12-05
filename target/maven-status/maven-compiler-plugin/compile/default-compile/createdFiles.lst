@@ -27,6 +27,7 @@ be\thomasmore\travelmore\service\LocatieService.class
 be\thomasmore\travelmore\controller\Inloggen.class
 be\thomasmore\travelmore\repository\BoekingRepository.class
 be\thomasmore\travelmore\service\BoekingService.class
+be\thomasmore\travelmore\controller\ImagesView.class
 be\thomasmore\travelmore\domain\Reis.class
 be\thomasmore\travelmore\controller\TransportmiddeltypeController.class
 be\thomasmore\travelmore\service\InlogService.class

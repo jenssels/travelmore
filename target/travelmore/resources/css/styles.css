@@ -22,3 +22,29 @@ h3 {
 .sso_header .ui-menuitem.ui-widget.ui-corner-all:last-child {
       float: right;
 }
+.mainpage{
+    background: url("#{request.contextPath}/resources/images/travel.jpg") no-repeat center fixed;
+    background-size: cover;
+    min-height: calc(100vh - 56px);
+}
+
+#logincard{
+    width: 75vw;
+    max-width: 310px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc((50vh - 7.175rem));
+    left: 50%;
+}
+
+input{
+    box-shadow: none !important;
+}
+
+.error{
+    color: red !important;
+}
+
+.tijdInfo{
+    list-style-type: none;
+}
