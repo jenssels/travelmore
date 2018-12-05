@@ -7,9 +7,7 @@
           <element id="module-output" name="travelmore" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.2" />
-          <element id="library" level="project" name="Maven: org.primefaces.themes:delta:1.0.10" />
-          <element id="library" level="project" name="Maven: org.omnifaces:omnifaces:2.7" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

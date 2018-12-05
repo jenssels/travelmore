@@ -5,12 +5,19 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
-<h:head><title>Travel More!</title></h:head>
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+            >
+<h:head>
+    <title>Travel More!</title>
+</h:head>
 <h:body>
+
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <h:outputLabel rendered='#{session.getAttribute("naam").toString() != null}'>Welkom #{session.getAttribute("naam")}</h:outputLabel>
+
+            <h:outputStylesheet library="css" name="styles.css" />
+
             <h2>Filteren</h2>
             <h:form id="filterReizen">
                 <p:panel id="panel" header="Form">
@@ -62,13 +69,13 @@
                 <p:column headerText="Prijs per persoon">
                     <h:outputText value="€#{reis.prijs}" />
                 </p:column>
-                <p:column headerText="Vrije plaasten">
+                <p:column headerText="Vrije plaatsen">
                     <h:outputText value="#{reisController.getVrijePlaatsen(reis.id)}" />
                 </p:column>
                  <p:column headerText="Boeking">
                      <h:form id="boekingForm">
                          <h:commandButton value="Boeken"  rendered='#{session.getAttribute("naam") != null and reisController.getVrijePlaatsen(reis.id) > 0}' action="#{boekingController.boekingForm(reis.id)}"  />
-                         <h:outputText rendered='#{session.getAttribute("naam") == null}' value="U moet ingelogd zijn voor deze actie" />
+                         <h:outputText rendered='#{session.getAttribute("naam") == null}' value="Inloggen vereist!" />
                      </h:form>
                  </p:column>
             </p:dataTable>

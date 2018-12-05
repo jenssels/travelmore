@@ -34,7 +34,7 @@
                 <p:panel id="panel" header="Betalen">
                     <h:panelGrid columns="4" cellpadding="5">
                         <h:outputText value="Te betalen prijs:" />
-                        <h:outputText value="#{boekingController.boeking.prijsbetaling}"/>
+                        <h:outputText value="#{boekingController.boeking.totaalPrijs}"/>
                         <h:outputLabel for="betalingsMiddel" value="Betalingsmiddel:" />
                         <h:selectOneMenu id="betalingsMiddel" value="#{boekingController.betalingsmiddel}" converter="omnifaces.SelectItemsConverter">
                             <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
