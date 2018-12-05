@@ -19,3 +19,7 @@ h3 {
     color: var(--main-txt-color);
     font-family: var(--main-font);
 }
+
+li.ui-menuitem.ui-widget.ui-corner-all.test {
+    float: right;
+}

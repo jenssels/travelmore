@@ -8,7 +8,7 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
 >
-
+<h:outputStylesheet library="css" name="styles.css"/>
 <body>
 <ui:composition>
     <h:form>
@@ -32,8 +32,10 @@
             </c:if>
 
             <c:if test='#{session.getAttribute("naam") != null}'>
-                <p:menuitem value="Logout" url="../travelmore/uitloggen.xhtml" icon="ui-icon-arrowrefresh-1-w" />
+                <p:menuitem>Welkom #{session.getAttribute("naam")}</p:menuitem>
+                <p:menuitem value="Logout" url="../travelmore/uitloggen.xhtml" icon="ui-icon-arrowrefresh-1-w" class="test"/>
             </c:if>
+
         </p:menubar>
         <br />
 
