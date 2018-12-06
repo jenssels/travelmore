@@ -21,7 +21,7 @@
                         </p:column>
 
                         <p:column headerText="">
-                            <h:commandLink value="Maak deze gebruiker admin!"
+                            <h:commandButton class="btn btn-secondary btn-sm" value="Maak deze gebruiker admin!"
                                            action="#{gebruikerController.maakAdmin(!gebruiker.admin, gebruiker.id)}"/>
                         </p:column>
                     </p:dataTable>

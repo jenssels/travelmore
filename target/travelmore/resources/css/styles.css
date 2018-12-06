@@ -8,9 +8,6 @@
     --main-font: Arial;
 }
 
-.test {
-    background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+.ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
+    text-align: center;
 }

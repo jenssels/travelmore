@@ -11,36 +11,50 @@
         <div class="mainpage">
             <div class="container">
                 <br/>
+
                 <h:form id="registreren">
-                    <p:panel id="panel" header="Registreer je hier!" style="margin-bottom:10px;">
-
-                        <h:outputLabel for="gebruikerMail" value="E-mail:"/>
-                        <p:inputText id="gebruikerMail" value="#{registratie.newGeruiker.mail}" required="true"/>
-                        <p:watermark value="Je e-mailadres" for="gebruikerMail"/>
-
-                        <h:outputLabel for="gebruikerNaam" value="Naam:"/>
-                        <p:inputText id="gebruikerNaam" value="#{registratie.newGeruiker.naam}" required="true"/>
-                        <p:watermark value="naam" for="gebruikerNaam"/>
-
-                        <h:outputLabel for="gebruikerWachtwoord" value="Wachtwoord:"/>
-                        <p:inputText type="password" id="gebruikerWachtwoord"
-                                     value="#{registratie.newGeruiker.wachtwoord}"
-                                     required="true"/>
-                        <p:watermark value="wachtwoord" for="gebruikerWachtwoord"/>
-
-                        <h:outputLabel for="gebruikerAdres" value="Adres:"/>
-                        <p:inputText id="gebruikerAdres" value="#{registratie.newGeruiker.adres}" required="true"/>
-                        <p:watermark value="adres" for="gebruikerAdres"/>
-
-                        <h:outputLabel for="gebruikerGemeente" value="Gemeente:"/>
-                        <p:inputText id="gebruikerGemeente" value="#{registratie.newGeruiker.gemeente}"
-                                     required="true"/>
-                        <p:watermark value="gemeente" for="gebruikerGemeente"/>
 
 
-                        <h:commandButton value="Registreren" action="#{registratie.Registreren}"/>
+                        <h4>Registreer je hier!</h4>
+                        <div class="input-group">
+                            <div class="input-group-prepend" style="width: 25%;">
+                                <span class="input-group-text w-100">E-mail en wachtwoord</span>
+                            </div>
+                            <p:inputText id="gebruikerMail" value="#{registratie.newGeruiker.mail}" required="true"
+                                         class="form-control"/>
+                            <p:inputText type="password" id="gebruikerWachtwoord"
+                                         value="#{registratie.newGeruiker.wachtwoord}"
+                                         required="true" class="form-control"/>
+                        </div>
 
-                    </p:panel>
+                        <div class="input-group">
+                            <div class="input-group-prepend" style="width: 25%;">
+                                <span class="input-group-text w-100">Adres</span>
+                            </div>
+                            <p:inputText style="width: 75%;" id="gebruikerAdres"
+                                         value="#{registratie.newGeruiker.adres}" required="true"/>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend" style="width: 25%;">
+                                <span class="input-group-text w-100">Gemeente</span>
+                            </div>
+                            <p:inputText style="width: 75%;" id="gebruikerGemeente"
+                                         value="#{registratie.newGeruiker.gemeente}" required="true"/>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend" style="width: 25%;">
+                                <span class="input-group-text w-100">Naam en voornaam</span>
+                            </div>
+                            <p:inputText id="gebruikerNaam" value="#{registratie.newGeruiker.naam}" required="true"
+                                         class="form-control"/>
+                            <div class="input-group-append">
+                                <h:commandButton value="Registreren" action="#{registratie.Registreren}"
+                                                 class="btn btn-secondary"/>
+                            </div>
+                        </div>
+
                 </h:form>
             </div>
         </div>

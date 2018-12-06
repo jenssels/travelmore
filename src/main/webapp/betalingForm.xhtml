@@ -44,8 +44,8 @@
                                     <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity"
                                                    itemLabel="#{entity.naam}" itemValue="#{entity}"/>
                                 </h:selectOneMenu>
-                                <h:commandButton value="Betalen" action="#{boekingController.betalen()}"/>
-                                <h:button value="Annuleren" outcome="mijnBoekingen"/>
+                                <h:commandButton class="btn btn-secondary btn-sm" value="Betalen" action="#{boekingController.betalen()}"/>
+                                <h:button class="btn btn-outline-secondary btn-sm" value="Annuleren" outcome="mijnBoekingen"/>
                             </h:panelGrid>
                         </p:panel>
                     </h:form>

@@ -6,19 +6,26 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+
 <ui:composition template="templates/commonLayout.xhtml">
     <ui:define name="content">
         <div class="mainpage">
             <div class="container">
                 <br/>
+                <h4>Aanmelden?</h4>
                 <h:form id="inloggen">
-                    <p:panel id="panel" header="Form" style="margin-bottom:10px;">
-                        <p:inputText id="email" binding="#{email}"/>
-                        <p:watermark value="email" for="email"/>
-                        <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}"/>
-                        <p:watermark value="wachtwoord" for="wachtwoord"/>
-                        <h:commandButton value="Login" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
-                    </p:panel>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">E-mail en wachtwoord</span>
+                        </div>
+                        <p:inputText id="email" binding="#{email}" class="form-control"/>
+                        <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}" class="form-control"/>
+                        <div class="input-group-append">
+                            <h:commandButton class="btn btn-secondary" id="button-addon2" value="Inloggen" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
+                        </div>
+                    </div>
+
                 </h:form>
             </div>
         </div>

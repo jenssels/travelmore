@@ -16,38 +16,27 @@
                     <br/>
                     <h4>Mijn boekingen</h4>
                     <p:dataTable var="boeking" value="#{boekingController.boekingen}" id="boekingDataTable">
-                        <p:column headerText="Reis gegevens" width="50%">
-                            <p:panel id="panelDetail">
-                                <h:panelGrid columns="6" cellpadding="5">
-                                    <h:outputText value="Vertrek Locatie:"/>
-                                    <h:outputText value="Bestemming:"/>
-                                    <h:outputText value="Vertrek datum:"/>
-                                    <h:outputText value="Terugkomst datum:"/>
-                                    <h:outputText value="Transportmiddel:"/>
-                                    <h:outputText value="Prijs per persoon:"/>
-                                    <h:outputText value="#{boeking.reis.vertreklocatie.naam}"/>
-                                    <h:outputText value="#{boeking.reis.aankomstlocatie.naam}"/>
-                                    <h:outputText value="#{boeking.reis.beginDatumString}"/>
-                                    <h:outputText value="#{boeking.reis.eindDatumString}"/>
-                                    <h:outputText value="#{boeking.reis.transportmiddel.naam}"/>
-                                    <h:outputText value="#{boeking.reis.prijs}"/>
-                                </h:panelGrid>
-                            </p:panel>
+                        <p:column headerText="Reisgegevens" width="40%">
+                            <h:outputText value="Vertrek vanuit: #{boeking.reis.vertreklocatie.naam}"/><br/>
+                            <h:outputText value="Bestemming: #{boeking.reis.aankomstlocatie.naam}"/><br/>
+                            <h:outputText value="Periode: #{boeking.reis.beginDatumString} tot #{boeking.reis.eindDatumString}"/><br/>
+                            <h:outputText value="Transport: #{boeking.reis.transportmiddel.naam}"/><br/>
+                            <h:outputText value="Prijs per persoon: €#{boeking.reis.prijs}"/><br/>
                         </p:column>
                         <p:column headerText="Aantal personen">
                             <h:outputText value="#{boeking.aantalPersonen}"/>
                         </p:column>
-                        <p:column headerText="Totaal prijs">
-                            <h:outputText value="#{boeking.getTotaalPrijs()}"/>
+                        <p:column headerText="Totaalprijs">
+                            <h:outputText value="€#{boeking.getTotaalPrijs()}"/>
                         </p:column>
                         <p:column headerText="Betaling">
                             <h:outputText value="#{boeking.betalingInorde()}"/>
                         </p:column>
                         <p:column headerText="Acties">
                             <h:form id="boekingForm">
-                                <h:commandButton value="Betalen" rendered="#{boeking.isBetaald() == false}"
+                                <h:commandButton class="btn btn-secondary btn-sm w-100" value="Betalen" rendered="#{boeking.isBetaald() == false}"
                                                  action="#{boekingController.betalingsForm(boeking.id)}"/>
-                                <h:commandButton value="Verwijderen"
+                                <h:commandButton class="btn btn-outline-secondary btn-sm w-100" value="Verwijderen"
                                                  action="#{boekingController.verwijder(boeking.id)}"/>
                             </h:form>
                         </p:column>
