@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d20bc46a-0d5d-433f-b729-773320776e39" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travelmore" beforeDir="false" afterPath="$PROJECT_DIR$/travelmore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travelmore/src/main/java/be/thomasmore/travelmore/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelmore/src/main/java/be/thomasmore/travelmore/controller/LocationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travelmore/src/main/java/be/thomasmore/travelmore/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelmore/src/main/java/be/thomasmore/travelmore/repository/LocationRepository.java" afterDir="false" />
@@ -27,7 +26,8 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -95,8 +95,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +268,7 @@
       <server-settings>
         <data>
           <option name="serverGroup" value="" />
-          <option name="transportHostId" />
+          <option name="transportHostId" value="" />
           <server-group />
           <host-id />
         </data>
@@ -295,11 +295,12 @@
       <updated>1543949462268</updated>
       <workItem from="1543949465100" duration="166000" />
       <workItem from="1543949689525" duration="232000" />
+      <workItem from="1544123645633" duration="472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398000" />
+    <option name="totallyTimeSpent" value="870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -312,8 +313,6 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32967034" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
@@ -326,6 +325,8 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Application Servers" order="12" weight="0.32967034" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
