@@ -9,35 +9,59 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core">
 <ui:composition template="templates/commonLayout.xhtml">
     <ui:define name="content">
-        <h3>Overzicht gebruikers</h3>
-        <h:form>
+        <div class="mainpage">
+            <div class="container">
+                <br/>
+                <h4>Overzicht locaties</h4>
+                <h:form>
 
-            <h:outputLabel for="locatieNaam" value="Locatie naam: " />
-            <p:inputText id="locatieNaam" value="#{locatieController.newLocatie.naam}"/>
-            <br/>
-            <h:outputLabel for="locatieCode" value="Locatie code: " />
-            <p:inputText id="locatieCode" value="#{locatieController.newLocatie.code}"/>
-            <br/>
-            <h:commandButton class="btn btn-primary" value="Locatie toevoegen" action="#{locatieController.submit}"/>
-        </h:form>
-        <h:form>
-            <p:dataTable var="location" value="#{locatieController.locations}">
-                <p:column headerText="Locatie">
-                    <h:inputText value="#{location.naam}" />
-                </p:column>
-                <p:column headerText="Code">
-                    <h:inputText value="#{location.code}" />
-                </p:column>
-                <!--<p:column headerText="Update">-->
-                    <!--<h:commandButton class="btn btn-secondary w-100" value="Update locatie"-->
-                                   <!--action="#{locatieController.updateLocatie(location.id)}"/>-->
-                <!--</p:column>-->
-                <!--<p:column headerText="Delete">-->
-                    <!--<h:commandButton class="btn btn-secondary w-100" value="Delete locatie"-->
-                                     <!--action="#{locatieController.deleteLocatie(location.id)}"/>-->
-                <!--</p:column>-->
-            </p:dataTable>
-        </h:form>
+                    <div class="row">
+                        <div class="col">
+                            <label for="locatieNaam">Naam locatie</label>
+                            <p:inputText class="form-control" id="locatieNaam"
+                                         value="#{locatieController.newLocatie.naam}"/>
+                        </div>
+                        <div class="col">
+                            <label for="locatieCode">Landcode</label>
+                            <p:inputText class="form-control" id="locatieCode"
+                                         value="#{locatieController.newLocatie.code}"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="row">
+                        <div class="col">
+                            <h:commandButton class="btn btn-secondary" value="Locatie toevoegen"
+                                             action="#{locatieController.submit}"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                </h:form>
+                <h:form>
+
+                    <p:dataTable var="location" value="#{locatieController.locations}">
+                        <p:column width="70%" headerText="Locatie">
+                            <h:outputText value="#{location.naam}"/>
+                        </p:column>
+
+                        <p:column width="30%" headerText="Landcode">
+                            <h:outputText value="#{location.code}"/>
+                        </p:column>
+
+                        <!--<p:column headerText="Update">-->
+                        <!--<h:commandButton class="btn btn-secondary w-100" value="Update locatie"-->
+                        <!--action="#{locatieController.updateLocatie(location.id)}"/>-->
+                        <!--</p:column>-->
+                        <!--<p:column headerText="Delete">-->
+                        <!--<h:commandButton class="btn btn-secondary w-100" value="Delete locatie"-->
+                        <!--action="#{locatieController.deleteLocatie(location.id)}"/>-->
+                        <!--</p:column>-->
+
+                    </p:dataTable>
+                </h:form>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
 </html>
