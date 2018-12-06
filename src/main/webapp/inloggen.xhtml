@@ -6,17 +6,30 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+
 <ui:composition template="templates/commonLayout.xhtml">
     <ui:define name="content">
-        <h:form id="inloggen">
-            <p:panel id="panel" header="Form" style="margin-bottom:10px;">
-                <p:inputText id="email" binding="#{email}"/>
-                <p:watermark value="email" for="email"/>
-                <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}"/>
-                <p:watermark value="wachtwoord" for="wachtwoord"/>
-                <h:commandButton value="Login" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
-            </p:panel>
-        </h:form>
+        <div class="mainpage">
+            <div class="container">
+                <br/>
+                <h4>Klaar voor de zon? Meld je hier aan!</h4>
+                <h:form id="inloggen">
+
+                    <div class="form-group">
+                        <label for="email">E-mailadres</label>
+                        <p:inputText id="email" binding="#{email}" class="form-control"/>
+                        <small id="emailHelp" class="form-text text-muted">Gebruik je e-mail om in te loggen!</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="wachtwoord">Wachtwoord</label>
+                        <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}" class="form-control"/>
+                    </div>
+
+                    <h:commandButton class="btn btn-secondary" value="Aanmelden" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
+
+                </h:form>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
 </html>

@@ -99,14 +99,14 @@ public class Reis {
 
     // Jens Sels - Formateer begin datum
     public String getBeginDatumString(){
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         return format.format(this.beginDatum);
 
     }
 
     // Jens Sels - Formateer eind datum
     public String getEindDatumString(){
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         return format.format(this.eindDatum);
 
     }

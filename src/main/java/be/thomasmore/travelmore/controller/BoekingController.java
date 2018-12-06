@@ -46,6 +46,7 @@ public class BoekingController {
 
     // Jens Sels - Ophalen van de gekozen reis en de pagina voor de boeking openen
     public String boekingForm(int id){
+        this.boekingAantalPersonen = 0;
         this.reis = this.reisService.findReisById(id);
 
         return "boekingForm";
@@ -98,7 +99,7 @@ public class BoekingController {
         return "mijnBoekingen";
     }
 
-    public void stuurBevestigMail(){
+    private void stuurBevestigMail(){
         String mailString = "U hebt u reis succesvol betaald met " + this.betalingsmiddel.getNaam() + "\r\n";
         mailString += "\r\n Reis gegevens:";
         mailString += "\r\n Vertrek datum: " + this.boeking.getReis().getBeginDatumString();
@@ -149,6 +150,7 @@ public class BoekingController {
         boekingService.deleteById(boekingService.findById(id));
         return "mijnBoekingen";
     }
+
 
     public Reis getReis() {
         return reis;

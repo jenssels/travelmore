@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+>
+<h:head>
+    <title>Travel More!</title>
+    <h:outputStylesheet name="bootstrap-4.1.3-dist/css/bootstrap.min.css"/>
+    <h:outputStylesheet name="css/styles.css"/>
+</h:head>
+<h:body>
+    <ui:composition template="templates/commonLayout.xhtml">
+        <ui:define name="content">
+
+            <p:imageSwitch effect="fade" id="fadeEffect">
+                <ui:repeat value="#{imagesView.images}" var="image" id="fadeEffectImages">
+                    <p:graphicImage name="/images/#{image}" id="image" style="width: 100%;" height="300"/>
+                </ui:repeat>
+            </p:imageSwitch>
+
+            <div class="mainpage">
+                <div class="container">
+                    <br/>
+                    <h4>Ticket naar de zon?</h4>
+                    <h:form id="filterReizen">
+                        <p:panelGrid styleClass="ui-noborder" style="width: 100%">
+
+                            <p:row>
+                                <p:column style="width: 25%">
+                                    <h:outputLabel for="vertrekLocatie" value="Vertrek vanuit:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <h:selectOneMenu style="width: 100%" id="vertrekLocatie" value="#{reisController.zoekVertrekLocatie}"
+                                                     converter="omnifaces.SelectItemsConverter">
+                                        <f:selectItem itemLabel="Alle locaties" noSelectionOption="true"/>
+                                        <f:selectItems value="#{locatieController.locaties}" var="entity"
+                                                       itemLabel="#{entity.naam}" itemValue="#{entity}"/>
+                                    </h:selectOneMenu>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <h:outputLabel for="bestemming" value="Bestemming:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <h:selectOneMenu style="width: 100%" id="bestemming" value="#{reisController.zoekBestemming}"
+                                                     converter="omnifaces.SelectItemsConverter">
+                                        <f:selectItem itemLabel="Alle locaties" noSelectionOption="true"/>
+                                        <f:selectItems value="#{locatieController.locaties}" var="entity"
+                                                       itemLabel="#{entity.naam}" itemValue="#{entity}"/>
+                                    </h:selectOneMenu>
+                                </p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column style="width: 25%">
+                                    <p:outputLabel for="startDatum" value="Startdatum:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <p:calendar style="width: 100%;" inputStyle="width: 100%;" id="startDatum" value="#{reisController.zoekStartDatum}"
+                                                pattern="dd-MM-yyyy" mask="true"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <p:outputLabel for="eindDatum" value="Einddatum:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <p:calendar style="width: 100%;" inputStyle="width: 100%;" id="eindDatum" value="#{reisController.zoekEindDatum}" pattern="dd-MM-yyyy"
+                                                mask="true"/>
+                                </p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column style="width: 25%">
+                                    <h:outputLabel for="budget" value="Prijs per persoon:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <p:inputText style="width: 100%" id="budget" converterId="javax.faces.Double"
+                                                 value="#{reisController.zoekBudget}"/>
+                                </p:column >
+                                <p:column style="width: 25%">
+                                    <h:outputLabel for="transportType" value="Vervoermiddel:"/>
+                                </p:column>
+                                <p:column style="width: 25%">
+                                    <h:selectOneMenu style="width: 100%" id="transportType" value="#{reisController.zoekTransportMiddelType}"
+                                                     converter="omnifaces.SelectItemsConverter">
+                                        <f:selectItem itemLabel="Alle vervoermiddelen" noSelectionOption="true"/>
+                                        <f:selectItems value="#{transportmiddeltypeController.transportmiddeltypes}"
+                                                       var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}"/>
+                                    </h:selectOneMenu>
+                                </p:column>
+                            </p:row>
+
+                            <p:row>
+                                <p:column style="width: 25%"></p:column>
+                                <p:column style="width: 25%"></p:column>
+                                <p:column style="width: 25%"> </p:column>
+                                <p:column style="width: 25%">
+                                    <h:commandButton class="btn btn-secondary btn-sm w-50" value="Zoeken" action="#{reisController.zoek()}"/>
+                                    <h:commandButton class="btn btn-outline-dark btn-sm w-50" value="Reset" action="#{reisController.reset()}"/>
+                                </p:column>
+                            </p:row>
+                        </p:panelGrid>
+
+                    </h:form>
+                    <br/>
+
+                    <h4>Ons aanbod</h4>
+                    <p:dataTable var="reis" value="#{reisController.reizen}" id="reisDataTable">
+                        <p:column headerText="Reisgegevens" width="50%">
+                            <h:outputText value="Vertrek vanuit: #{reis.vertreklocatie.naam}"/><br/>
+                            <h:outputText value="Bestemming: #{reis.aankomstlocatie.naam}"/><br/>
+                            <h:outputText value="Periode: van #{reis.getBeginDatumString()} tot #{reis.getEindDatumString()}"/><br/>
+                            <h:outputText value="Vervoermiddel: #{reis.transportmiddel.naam}"/><br/>
+                        </p:column>
+                        <p:column headerText="Prijs per persoon">
+                            <h:outputText value="€#{reis.prijs}"/>
+                        </p:column>
+                        <p:column headerText="Vrije plaatsen">
+                            <h:outputText value="#{reisController.getVrijePlaatsen(reis.id)}"/>
+                        </p:column>
+                        <p:column headerText="Boek nu!">
+                            <h:form id="boekingForm">
+                                <h:commandButton class="btn btn-secondary w-100" value="Reis boeken"
+                                                 rendered='#{session.getAttribute("naam") != null and reisController.getVrijePlaatsen(reis.id) > 0}'
+                                                 action="#{boekingController.boekingForm(reis.id)}"/>
+                                <h:outputText rendered='#{session.getAttribute("naam") == null}'
+                                              value="Inloggen vereist!"/>
+                            </h:form>
+                        </p:column>
+                    </p:dataTable>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

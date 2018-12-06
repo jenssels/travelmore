@@ -17,4 +17,24 @@ public class LocatieService {
     public List<Locatie> findAllLocaties(){
         return locatieRepository.findAll();
     }
+
+    // Jolien Lauwers - Zoek locatie via id
+    public Locatie findLocationById(int id) {
+        return locatieRepository.findById(id);
+    }
+
+    // Jolien Lauwers - Voeg locatie toe
+    public void insert(Locatie locatie) {
+        locatieRepository.insert(locatie);
+    }
+
+    public void updateLocatie(Locatie locatie)
+    {
+        locatieRepository.upadteLocatie(locatie);
+    }
+
+    public void deleteLocatie(Locatie locatie)
+    {
+        locatieRepository.deleteLocatie(locatie);
+    }
 }

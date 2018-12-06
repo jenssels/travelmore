@@ -1,0 +1,13 @@
+:root {
+    --main-bg-color: white;
+    --main-txt-color: #191A1D;
+    --main-offset-color: #153E5C;
+    --main-highlight-color: #F2BE54;
+    --main-softhighlight-color: #CDD4CA;
+    --main-middle-color: #87AEB4;
+    --main-font: Arial;
+}
+
+.ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
+    text-align: center;
+}

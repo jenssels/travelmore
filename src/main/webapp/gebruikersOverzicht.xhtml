@@ -7,14 +7,32 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://java.sun.com/jsp/jstl/core">
-<h3>Wilt u uit loggen</h3>
-<h:form>
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="content">
+        <div class="mainpage">
+            <div class="container">
+                <br/>
+                <h4>Overzicht gebruikers</h4>
+                <h:form>
 
-    <ul>
-    <ui:repeat value="#{gebruikerController.gebruikers}" var="m">
-        <li> #{m.naam}: <h:commandLink value="Verander de admin status" action="#{gebruikerController.maakAdmin(!m.admin, m.id)}"/></li>
-    </ui:repeat>
-    </ul>
-</h:form>
-<a href="index.xhtml">home</a>
+                    <p:dataTable var="gebruiker" value="#{gebruikerController.gebruikers}">
+                        <p:column width="40%" headerText="Gebruikersnaam">
+                            <h:outputText value="#{gebruiker.naam}"/>
+                        </p:column>
+
+                        <p:column width="40%" headerText="E-mailadres">
+                            <h:outputText value="#{gebruiker.mail}"/>
+                        </p:column>
+
+                        <p:column headerText="">
+                            <h:commandButton class="btn btn-secondary w-100" value="Maak administrator"
+                                             action="#{gebruikerController.maakAdmin(!gebruiker.admin, gebruiker.id)}"/>
+                        </p:column>
+                    </p:dataTable>
+
+                </h:form>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
 </html>

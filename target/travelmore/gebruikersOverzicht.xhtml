@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="content">
+        <div class="mainpage">
+            <div class="container">
+                <br/>
+                <h4>Overzicht gebruikers</h4>
+                <h:form>
+
+                    <p:dataTable var="gebruiker" value="#{gebruikerController.gebruikers}">
+                        <p:column width="40%" headerText="Gebruikersnaam">
+                            <h:outputText value="#{gebruiker.naam}"/>
+                        </p:column>
+
+                        <p:column width="40%" headerText="E-mailadres">
+                            <h:outputText value="#{gebruiker.mail}"/>
+                        </p:column>
+
+                        <p:column headerText="">
+                            <h:commandButton class="btn btn-secondary w-100" value="Maak administrator"
+                                             action="#{gebruikerController.maakAdmin(!gebruiker.admin, gebruiker.id)}"/>
+                        </p:column>
+                    </p:dataTable>
+
+                </h:form>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

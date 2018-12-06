@@ -30,7 +30,7 @@ public class GebruikerController {
 
         gebruikerService.updateAdminLevel(gebruiker);
 
-        return "index";
+        return "gebruikersOverzicht";
 
     }
 }
