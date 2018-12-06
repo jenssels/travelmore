@@ -17,7 +17,8 @@
             <br/>
             <h:outputLabel for="locatieCode" value="Locatie code: " />
             <p:inputText id="locatieCode" value="#{locatieController.newLocatie.code}"/>
-            <h:commandButton value="Locatie toevoegen" action="#{locatieController.submit}"/>
+            <br/>
+            <h:commandButton class="btn btn-primary" value="Locatie toevoegen" action="#{locatieController.submit}"/>
         </h:form>
         <h:form>
             <p:dataTable var="location" value="#{locatieController.locations}">
@@ -27,12 +28,12 @@
                 <p:column headerText="Code">
                     <h:inputText value="#{location.code}" />
                 </p:column>
-                <p:column headerText="Update">
-                    <h:commandButton value="Update locatie"
-                                   action="#{locatieController.updateLocatie(location.id)}"/>
-                </p:column>
+                <!--<p:column headerText="Update">-->
+                    <!--<h:commandButton class="btn btn-secondary w-100" value="Update locatie"-->
+                                   <!--action="#{locatieController.updateLocatie(location.id)}"/>-->
+                <!--</p:column>-->
                 <!--<p:column headerText="Delete">-->
-                    <!--<h:commandButton value="Delete locatie"-->
+                    <!--<h:commandButton class="btn btn-secondary w-100" value="Delete locatie"-->
                                      <!--action="#{locatieController.deleteLocatie(location.id)}"/>-->
                 <!--</p:column>-->
             </p:dataTable>

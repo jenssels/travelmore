@@ -8,3 +8,6 @@
     --main-font: Arial;
 }
 
+.ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
+    text-align: center;
+}

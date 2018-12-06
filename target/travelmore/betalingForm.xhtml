@@ -11,39 +11,69 @@
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <h2>Boeking Betalen</h2>
-            <p:panel id="panelDetail">
-                <h:panelGrid columns="7" cellpadding="5">
-                    <h:outputText value="Vertrek Locatie:" />
-                    <h:outputText value="Bestemming:" />
-                    <h:outputText value="Vertrek datum:" />
-                    <h:outputText value="Terugkomst datum:" />
-                    <h:outputText value="Transportmiddel:" />
-                    <h:outputText value="Prijs per persoon:" />
-                    <h:outputText value="Aantal personen:" />
-                    <h:outputText value="#{boekingController.boeking.reis.vertreklocatie.naam}" />
-                    <h:outputText value="#{boekingController.boeking.reis.aankomstlocatie.naam}" />
-                    <h:outputText value="#{boekingController.boeking.reis.beginDatumString}" />
-                    <h:outputText value="#{boekingController.boeking.reis.eindDatumString}" />
-                    <h:outputText value="#{boekingController.boeking.reis.transportmiddel.naam}" />
-                    <h:outputText value="#{boekingController.boeking.prijsbetaling}" />
-                    <h:outputText value="#{boekingController.boeking.aantalPersonen}" />
-                </h:panelGrid>
-            </p:panel>
-            <h:form id="betalen">
-                <p:panel id="panel" header="Betalen">
-                    <h:panelGrid columns="4" cellpadding="5">
-                        <h:outputText value="Te betalen prijs:" />
-                        <h:outputText value="#{boekingController.boeking.totaalPrijs}"/>
-                        <h:outputLabel for="betalingsMiddel" value="Betalingsmiddel:" />
-                        <h:selectOneMenu id="betalingsMiddel" value="#{boekingController.betalingsmiddel}" converter="omnifaces.SelectItemsConverter">
-                            <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
-                        </h:selectOneMenu>
-                        <h:commandButton value="Betalen" action="#{boekingController.betalen()}"  />
-                        <h:button value="Annuleren" outcome="mijnBoekingen" />
-                    </h:panelGrid>
-                </p:panel>
-            </h:form>
+            <div class="mainpage">
+                <div class="container">
+                    <br/>
+                    <h4>Boeking betalen</h4>
+
+                    <p:panel id="panelDetail" header="Reisgegevens">
+                        <h:panelGrid columns="1">
+                            <h:outputText value="Vertrek vanuit: #{boekingController.boeking.reis.vertreklocatie.naam}"/>
+                            <h:outputText value="Bestemming: #{boekingController.boeking.reis.aankomstlocatie.naam}"/>
+                            <h:outputText
+                                    value="Periode: van #{boekingController.boeking.reis.beginDatumString} tot #{boekingController.boeking.reis.eindDatumString}"/>
+                            <h:outputText value="Vervoermiddel: #{boekingController.boeking.reis.transportmiddel.naam}"/>
+                            <h:outputText value="Prijs per persoon: #{boekingController.boeking.prijsbetaling}"/>
+                            <h:outputText value="Aantal personen: #{boekingController.boeking.aantalPersonen}"/>
+                        </h:panelGrid>
+                    </p:panel>
+                    <br/>
+
+                    <h:form id="betalen">
+                        <p:panel id="panel" header="Betalingsdetails">
+                            <p:panelGrid styleClass="ui-noborder" style="width: 100%">
+
+                                <p:row>
+                                    <p:column style="width: 25%">
+                                        <h:outputLabel for="totaalPrijs" value="Totaalprijs:"/>
+                                    </p:column>
+                                    <p:column style="width: 25%">
+                                        <h:outputText id="totaalPrijs" value="€#{boekingController.boeking.totaalPrijs}"/>
+                                    </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                </p:row>
+
+                                <p:row>
+                                    <p:column style="width: 25%">
+                                        <h:outputLabel for="betalingsMiddel" value="Betalingsmiddel:"/>
+                                    </p:column>
+                                    <p:column style="width: 25%">
+                                        <h:selectOneMenu style="width: 100%" id="betalingsMiddel" value="#{boekingController.betalingsmiddel}"
+                                                         converter="omnifaces.SelectItemsConverter">
+                                            <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity"
+                                                           itemLabel="#{entity.naam}" itemValue="#{entity}"/>
+                                        </h:selectOneMenu>
+                                    </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                </p:row>
+
+                                <p:row>
+                                    <p:column style="width: 25%"> </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                    <p:column style="width: 25%"> </p:column>
+                                    <p:column style="width: 25%">
+                                        <h:commandButton class="btn btn-secondary w-50" value="Betalen" action="#{boekingController.betalen()}"/>
+                                        <h:button class="btn btn-outline-dark w-50" value="Annuleren" outcome="mijnBoekingen"/>
+                                    </p:column>
+                                </p:row>
+
+                            </p:panelGrid>
+                        </p:panel>
+                    </h:form>
+                </div>
+            </div>
         </ui:define>
     </ui:composition>
 </h:body>

@@ -9,21 +9,30 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core">
 <ui:composition template="templates/commonLayout.xhtml">
     <ui:define name="content">
-        <h3>Overzicht gebruikers</h3>
-        <h:form>
+        <div class="mainpage">
+            <div class="container">
+                <br/>
+                <h4>Overzicht gebruikers</h4>
+                <h:form>
 
-            <p:dataTable var="gebruiker" value="#{gebruikerController.gebruikers}">
-                <p:column headerText="Gebruikersnaam">
-                    <h:outputText value="#{gebruiker.naam}" />
-                </p:column>
+                    <p:dataTable var="gebruiker" value="#{gebruikerController.gebruikers}">
+                        <p:column width="40%" headerText="Gebruikersnaam">
+                            <h:outputText value="#{gebruiker.naam}"/>
+                        </p:column>
 
-                <p:column headerText="">
-                    <h:commandLink value="Maak deze gebruiker admin!"
-                                   action="#{gebruikerController.maakAdmin(!gebruiker.admin, gebruiker.id)}"/>
-                </p:column>
-            </p:dataTable>
+                        <p:column width="40%" headerText="E-mailadres">
+                            <h:outputText value="#{gebruiker.mail}"/>
+                        </p:column>
 
-        </h:form>
+                        <p:column headerText="">
+                            <h:commandButton class="btn btn-secondary w-100" value="Maak administrator"
+                                             action="#{gebruikerController.maakAdmin(!gebruiker.admin, gebruiker.id)}"/>
+                        </p:column>
+                    </p:dataTable>
+
+                </h:form>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
 </html>
