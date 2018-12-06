@@ -2,6 +2,7 @@ package be.thomasmore.travelmore.rest;
 
 import be.thomasmore.travelmore.domain.Locatie;
 import be.thomasmore.travelmore.service.LocatieService;
+import be.thomasmore.travelmore.service.ReisService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -39,5 +40,25 @@ public class LocationRestService {
 
         locatieService.insert(locatie);
         return Response.status(Response.Status.CREATED).entity(locatie).build();
+    }
+
+    @PUT
+    @Path("/updatelocation")
+    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    public  Response updateLocation(Locatie locatie)
+    {
+        locatieService.updateLocatie(locatie);
+        return Response.status(Response.Status.OK).entity(locatie).build();
+    }
+
+    @DELETE
+    @Path("/deleteLocation")
+    @Produces()
+    @Consumes()
+    public Response deleteLocatie(Locatie locatie)
+    {
+        locatieService.deleteLocatie(locatie);
+        return Response.status(Response.Status.GONE).entity(locatie).build();
     }
 }

@@ -1,16 +1,20 @@
-be\thomasmore\travelmore\domain\Betalingsmiddel.class
-be\thomasmore\travelmore\domain\Boeking.class
+be\thomasmore\travelmore\repository\TransportmiddeltypeRepository.class
+be\thomasmore\travelmore\controller\BoekingController$1.class
 be\thomasmore\travelmore\domain\Transportmiddel.class
 be\thomasmore\travelmore\repository\InlogRepository.class
-be\thomasmore\travelmore\repository\GebruikerRepository.class
-be\thomasmore\travelmore\domain\Gebruiker.class
+be\thomasmore\travelmore\controller\GebruikerController.class
+be\thomasmore\travelmore\controller\Serialize.class
+be\thomasmore\travelmore\rest\LocationRestService.class
+be\thomasmore\travelmore\controller\BoekingController.class
+be\thomasmore\travelmore\controller\BetalingsmiddelController.class
+be\thomasmore\travelmore\repository\BetalingsmiddelRepository.class
 be\thomasmore\travelmore\domain\Transportmiddeltype.class
 be\thomasmore\travelmore\service\GebruikerService.class
-be\thomasmore\travelmore\controller\Inloggen.class
+be\thomasmore\travelmore\controller\SessionUtils.class
+be\thomasmore\travelmore\repository\ReisRepository.class
+be\thomasmore\travelmore\service\TransportmiddeltypeService.class
 be\thomasmore\travelmore\controller\Registratie.class
 be\thomasmore\travelmore\domain\Locatie.class
-<<<<<<< HEAD
-=======
 be\thomasmore\travelmore\domain\Betalingsmiddel.class
 be\thomasmore\travelmore\domain\Boeking.class
 be\thomasmore\travelmore\service\BetalingsmiddelService.class
@@ -25,6 +29,6 @@ be\thomasmore\travelmore\controller\Inloggen.class
 be\thomasmore\travelmore\repository\BoekingRepository.class
 be\thomasmore\travelmore\service\BoekingService.class
 be\thomasmore\travelmore\controller\ImagesView.class
->>>>>>> f3b05622979bbf5638067bb0b4b19a81f14d68f9
 be\thomasmore\travelmore\domain\Reis.class
+be\thomasmore\travelmore\controller\TransportmiddeltypeController.class
 be\thomasmore\travelmore\service\InlogService.class

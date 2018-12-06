@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+
+>
+<body>
+<ui:composition>
+
+    <!--<h:graphicImage name="/images/travelmore.png" alt="travelmore" style="display: block; margin: 0px auto;"/>-->
+    <p:imageSwitch effect="fade" id="fadeEffect">
+        <ui:repeat value="#{imagesView.images}" var="image" id="fadeEffectImages">
+            <p:graphicImage name="/images/#{image}" id="image" style="width: 100%;" height="300"/>
+        </ui:repeat>
+    </p:imageSwitch>
+
+</ui:composition>
+</body>
+</html>

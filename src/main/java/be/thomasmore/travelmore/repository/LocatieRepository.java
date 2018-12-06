@@ -26,4 +26,16 @@ public class LocatieRepository {
         entityManager.persist(locatie);
         entityManager.flush();
     }
+
+    public void upadteLocatie(Locatie locatie)
+    {
+        entityManager.merge(locatie);
+    }
+
+    public void deleteLocatie (Locatie locatie)
+    {
+        locatie = entityManager.merge(locatie);
+        entityManager.remove(locatie);
+        System.out.println("---------------------------------------FUBAR------------------------------------------");
+    }
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="content">
+        <h3>Overzicht gebruikers</h3>
+        <h:form>
+
+            <h:outputLabel for="locatieNaam" value="Locatie naam: " />
+            <p:inputText id="locatieNaam" value="#{locatieController.newLocatie.naam}"/>
+            <br/>
+            <h:outputLabel for="locatieCode" value="Locatie code: " />
+            <p:inputText id="locatieCode" value="#{locatieController.newLocatie.code}"/>
+            <h:commandButton value="Locatie toevoegen" action="#{locatieController.submit}"/>
+        </h:form>
+        <h:form>
+            <p:dataTable var="location" value="#{locatieController.locations}">
+                <p:column headerText="Locatie">
+                    <h:inputText value="#{location.naam}" />
+                </p:column>
+                <p:column headerText="Code">
+                    <h:inputText value="#{location.code}" />
+                </p:column>
+                <p:column headerText="Update">
+                    <h:commandButton value="Update locatie"
+                                   action="#{locatieController.updateLocatie(location.id)}"/>
+                </p:column>
+                <!--<p:column headerText="Delete">-->
+                    <!--<h:commandButton value="Delete locatie"-->
+                                     <!--action="#{locatieController.deleteLocatie(location.id)}"/>-->
+                <!--</p:column>-->
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

@@ -8,20 +8,15 @@
       xmlns:p="http://primefaces.org/ui">
 <ui:composition template="templates/commonLayout.xhtml">
     <ui:define name="content">
-        <div class="mainpage">
-            <div class="container">
-                <br/>
-                <h:form id="inloggen">
-                    <p:panel id="panel" header="Form" style="margin-bottom:10px;">
-                        <p:inputText id="email" binding="#{email}"/>
-                        <p:watermark value="email" for="email"/>
-                        <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}"/>
-                        <p:watermark value="wachtwoord" for="wachtwoord"/>
-                        <h:commandButton value="Login" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
-                    </p:panel>
-                </h:form>
-            </div>
-        </div>
+        <h:form id="inloggen">
+            <p:panel id="panel" header="Form" style="margin-bottom:10px;">
+                <p:inputText id="email" binding="#{email}"/>
+                <p:watermark value="email" for="email"/>
+                <p:inputText type="password" id="wachtwoord" binding="#{wachtwoord}"/>
+                <p:watermark value="wachtwoord" for="wachtwoord"/>
+                <h:commandButton value="Login" action="#{inloggen.inloggen(email.value, wachtwoord.value)}"/>
+            </p:panel>
+        </h:form>
     </ui:define>
 </ui:composition>
 </html>

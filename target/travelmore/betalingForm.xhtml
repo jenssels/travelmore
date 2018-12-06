@@ -11,46 +11,39 @@
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <div class="mainpage">
-                <div class="container">
-                    <br/>
-                    <h4>Boeking Betalen</h4>
-                    <p:panel id="panelDetail">
-                        <h:panelGrid columns="7" cellpadding="5">
-                            <h:outputText value="Vertrek Locatie:"/>
-                            <h:outputText value="Bestemming:"/>
-                            <h:outputText value="Vertrek datum:"/>
-                            <h:outputText value="Terugkomst datum:"/>
-                            <h:outputText value="Transportmiddel:"/>
-                            <h:outputText value="Prijs per persoon:"/>
-                            <h:outputText value="Aantal personen:"/>
-                            <h:outputText value="#{boekingController.boeking.reis.vertreklocatie.naam}"/>
-                            <h:outputText value="#{boekingController.boeking.reis.aankomstlocatie.naam}"/>
-                            <h:outputText value="#{boekingController.boeking.reis.beginDatumString}"/>
-                            <h:outputText value="#{boekingController.boeking.reis.eindDatumString}"/>
-                            <h:outputText value="#{boekingController.boeking.reis.transportmiddel.naam}"/>
-                            <h:outputText value="#{boekingController.boeking.prijsbetaling}"/>
-                            <h:outputText value="#{boekingController.boeking.aantalPersonen}"/>
-                        </h:panelGrid>
-                    </p:panel>
-                    <h:form id="betalen">
-                        <p:panel id="panel" header="Betalen">
-                            <h:panelGrid columns="4" cellpadding="5">
-                                <h:outputText value="Te betalen prijs:"/>
-                                <h:outputText value="#{boekingController.boeking.totaalPrijs}"/>
-                                <h:outputLabel for="betalingsMiddel" value="Betalingsmiddel:"/>
-                                <h:selectOneMenu id="betalingsMiddel" value="#{boekingController.betalingsmiddel}"
-                                                 converter="omnifaces.SelectItemsConverter">
-                                    <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity"
-                                                   itemLabel="#{entity.naam}" itemValue="#{entity}"/>
-                                </h:selectOneMenu>
-                                <h:commandButton value="Betalen" action="#{boekingController.betalen()}"/>
-                                <h:button value="Annuleren" outcome="mijnBoekingen"/>
-                            </h:panelGrid>
-                        </p:panel>
-                    </h:form>
-                </div>
-            </div>
+            <h2>Boeking Betalen</h2>
+            <p:panel id="panelDetail">
+                <h:panelGrid columns="7" cellpadding="5">
+                    <h:outputText value="Vertrek Locatie:" />
+                    <h:outputText value="Bestemming:" />
+                    <h:outputText value="Vertrek datum:" />
+                    <h:outputText value="Terugkomst datum:" />
+                    <h:outputText value="Transportmiddel:" />
+                    <h:outputText value="Prijs per persoon:" />
+                    <h:outputText value="Aantal personen:" />
+                    <h:outputText value="#{boekingController.boeking.reis.vertreklocatie.naam}" />
+                    <h:outputText value="#{boekingController.boeking.reis.aankomstlocatie.naam}" />
+                    <h:outputText value="#{boekingController.boeking.reis.beginDatumString}" />
+                    <h:outputText value="#{boekingController.boeking.reis.eindDatumString}" />
+                    <h:outputText value="#{boekingController.boeking.reis.transportmiddel.naam}" />
+                    <h:outputText value="#{boekingController.boeking.prijsbetaling}" />
+                    <h:outputText value="#{boekingController.boeking.aantalPersonen}" />
+                </h:panelGrid>
+            </p:panel>
+            <h:form id="betalen">
+                <p:panel id="panel" header="Betalen">
+                    <h:panelGrid columns="4" cellpadding="5">
+                        <h:outputText value="Te betalen prijs:" />
+                        <h:outputText value="#{boekingController.boeking.totaalPrijs}"/>
+                        <h:outputLabel for="betalingsMiddel" value="Betalingsmiddel:" />
+                        <h:selectOneMenu id="betalingsMiddel" value="#{boekingController.betalingsmiddel}" converter="omnifaces.SelectItemsConverter">
+                            <f:selectItems value="#{betalingsmiddelController.betalingsmiddelen}" var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}" />
+                        </h:selectOneMenu>
+                        <h:commandButton value="Betalen" action="#{boekingController.betalen()}"  />
+                        <h:button value="Annuleren" outcome="mijnBoekingen" />
+                    </h:panelGrid>
+                </p:panel>
+            </h:form>
         </ui:define>
     </ui:composition>
 </h:body>

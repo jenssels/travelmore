@@ -11,39 +11,33 @@
 <h:body>
     <ui:composition template="templates/commonLayout.xhtml">
         <ui:define name="content">
-            <div class="mainpage">
-                <div class="container">
-                    <br/>
-                    <h4>Gekozen reis</h4>
-                    <p:panel id="panelDetail" header="Reis gegevens">
-                        <h:panelGrid columns="6" cellpadding="5">
-                            <h:outputText value="Vertrek Locatie:"/>
-                            <h:outputText value="Bestemming:"/>
-                            <h:outputText value="Vertrek datum:"/>
-                            <h:outputText value="Terugkomst datum:"/>
-                            <h:outputText value="Transportmiddel:"/>
-                            <h:outputText value="Prijs per persoon:"/>
-                            <h:outputText value="#{boekingController.reis.vertreklocatie.naam}"/>
-                            <h:outputText value="#{boekingController.reis.aankomstlocatie.naam}"/>
-                            <h:outputText value="#{boekingController.reis.beginDatumString}"/>
-                            <h:outputText value="#{boekingController.reis.eindDatumString}"/>
-                            <h:outputText value="#{boekingController.reis.transportmiddel.naam}"/>
-                            <h:outputText value="#{boekingController.reis.prijs}"/>
-                        </h:panelGrid>
-                    </p:panel>
-                    <h:form id="boeking">
-                        <p:panel id="panel" header="Boeken">
-                            <h:panelGrid columns="4" cellpadding="5">
-                                <h:outputLabel for="aantalPersonen" value="Aantal personen:"/>
-                                <p:inputText id="aantalPersonen" converterId="javax.faces.Integer"
-                                             value="#{boekingController.boekingAantalPersonen}"/>
-                                <h:commandButton value="Boeken" action="#{boekingController.boek()}"/>
-                                <h:button value="Annuleren" outcome="index"/>
-                            </h:panelGrid>
-                        </p:panel>
-                    </h:form>
-                </div>
-            </div>
+            <h2>Gekozen reis</h2>
+            <p:panel id="panelDetail" header="Reis gegevens">
+                <h:panelGrid columns="6" cellpadding="5">
+                    <h:outputText value="Vertrek Locatie:" />
+                    <h:outputText value="Bestemming:" />
+                    <h:outputText value="Vertrek datum:" />
+                    <h:outputText value="Terugkomst datum:" />
+                    <h:outputText value="Transportmiddel:" />
+                    <h:outputText value="Prijs per persoon:" />
+                    <h:outputText value="#{boekingController.reis.vertreklocatie.naam}" />
+                    <h:outputText value="#{boekingController.reis.aankomstlocatie.naam}" />
+                    <h:outputText value="#{boekingController.reis.beginDatumString}" />
+                    <h:outputText value="#{boekingController.reis.eindDatumString}" />
+                    <h:outputText value="#{boekingController.reis.transportmiddel.naam}" />
+                    <h:outputText value="#{boekingController.reis.prijs}" />
+                </h:panelGrid>
+            </p:panel>
+            <h:form id="boeking">
+                <p:panel id="panel" header="Boeken">
+                    <h:panelGrid columns="4" cellpadding="5">
+                        <h:outputLabel for="aantalPersonen" value="Aantal personen:" />
+                        <p:inputText id="aantalPersonen" converterId="javax.faces.Integer" value="#{boekingController.boekingAantalPersonen}" />
+                        <h:commandButton value="Boeken" action="#{boekingController.boek()}"  />
+                        <h:button value="Annuleren" outcome="index" />
+                    </h:panelGrid>
+                </p:panel>
+            </h:form>
         </ui:define>
     </ui:composition>
 </h:body>

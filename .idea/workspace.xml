@@ -6,23 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a24114-03bb-463d-9c09-f1e1274bb538" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/betalingForm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/betalingForm.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/boekingForm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/boekingForm.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/gebruikersOverzicht.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gebruikersOverzicht.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/inloggen.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inloggen.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mijnBoekingen.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mijnBoekingen.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registreren.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registreren.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/uitgelogd.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uitgelogd.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/uitloggen.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uitloggen.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/travelmore.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/travelmore.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/travelmore/betalingForm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/travelmore/betalingForm.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/travelmore/gebruikersOverzicht.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/travelmore/gebruikersOverzicht.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/travelmore/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/travelmore/resources/css/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="82a24114-03bb-463d-9c09-f1e1274bb538" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,75 +18,61 @@
     <session id="-1629199914">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="3" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Ingelogged" value="1" />
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="38" />
+          <entry key="java" value="50" />
           <entry key="outgelogged" value="1" />
           <entry key="sql" value="2" />
           <entry key="txt" value="1" />
-          <entry key="xhtml" value="11" />
-          <entry key="xml" value="12" />
+          <entry key="xhtml" value="20" />
+          <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="38" />
+          <entry key="JAVA" value="50" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="2" />
-          <entry key="XHTML" value="13" />
-          <entry key="XML" value="12" />
+          <entry key="XHTML" value="22" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Ingelogged" value="36" />
           <entry key="dummy" value="11" />
-          <entry key="java" value="3264" />
+          <entry key="java" value="4141" />
           <entry key="sql" value="990" />
-          <entry key="xhtml" value="920" />
-          <entry key="xml" value="6" />
+          <entry key="xhtml" value="1418" />
+          <entry key="xml" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3264" />
+          <entry key="JAVA" value="4141" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="SQL" value="990" />
-          <entry key="XHTML" value="956" />
-          <entry key="XML" value="6" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-570253716">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="1" />
-          <entry key="xml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="1" />
-          <entry key="XML" value="3" />
+          <entry key="XHTML" value="1454" />
+          <entry key="XML" value="28" />
         </counts>
       </usages-collector>
     </session>
@@ -110,85 +80,123 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Registratie.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/LocatieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/InlogRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Inloggen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-503">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="181">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/LocatieController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/LocatieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="117">
+              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/LocatieRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2176">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            <state relative-caret-position="232">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+              <folding>
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-          <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/BoekingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-299" />
+            <state relative-caret-position="153">
+              <caret line="148" column="27" lean-forward="true" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/BoekingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <folding>
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1383#1384#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/BoekingRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/persistence/EntityManager.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/gebruikersOverzicht.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/locatiesBeheren.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="20" selection-end-line="36" selection-end-column="31" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/rest/LocationRestService.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Transportmiddel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="334">
+              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -199,6 +207,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="jsf" />
       </list>
     </option>
   </component>
@@ -206,10 +215,11 @@
     <findStrings>
       <find>/</find>
       <find>dcipher</find>
+      <find>SelectItemsConverter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/travelmore" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -218,7 +228,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/sql/travel_more_ddl.sql" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Locatie.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Registreren.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/RegistratieRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/RegistratieService.java" />
@@ -230,11 +239,20 @@
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Registratie.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/GebruikerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Gebruiker.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/SessionUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Inloggen.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ingelogged.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/uitgelogged.xhtml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/uitloggen.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/commonNavbar.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/LocatieService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/rest/LocationRestService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/LocatieRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/LocatieController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/locatiesBeheren.xhtml" />
       </list>
     </option>
   </component>
@@ -253,7 +271,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="travelmore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="travelmore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -269,6 +297,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,6 +382,13 @@
               <item name="travelmore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelmore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travelmore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,18 +399,20 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="travelmore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542048745547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544047917271" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -399,7 +438,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 11.0.0.Final1" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="travelmore:war">
@@ -567,12 +605,13 @@
       <workItem from="1542028422078" duration="2340000" />
       <workItem from="1542039358258" duration="4753000" />
       <workItem from="1542481189725" duration="113000" />
-      <workItem from="1544018599668" duration="653000" />
+      <workItem from="1544018599668" duration="9036000" />
+      <workItem from="1544113477075" duration="6231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51499000" />
+    <option name="totallyTimeSpent" value="64811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,7 +626,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24765101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26845637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -598,7 +637,7 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798658" visible="true" weight="0.36737588" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798658" visible="true" weight="0.3858156" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,15 +679,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/travelmore/target/travelmore/index.xhtml" />
     <entry file="file://$PROJECT_DIR$/travelmore/README.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/LocatieRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/LocatieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/LocatieService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/RegistratieService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/RegistratieRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Betalingsmiddel.java">
@@ -672,13 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -707,6 +730,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -729,25 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Inloggen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-503">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/uitgelogged.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="527">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -755,6 +764,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -765,21 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Registratie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/GebruikerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,32 +793,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/InlogRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Gebruiker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="62" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/TransportmiddeltypeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Gebruiker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2176">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="-380">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -825,39 +815,188 @@
       <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/TransportmiddeltypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/TransportmiddeltypeService.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JSF/lib/jsf-support.jar!/resources/schemas/ee7/taglib/html_basic.taglib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="9663" column="38" lean-forward="true" selection-start-line="9662" selection-start-column="34" selection-end-line="9663" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/uitgelogd.xhtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/uitgelogged.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299" />
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/domain/Transportmiddeltype.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/uitloggen.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="121" selection-start-line="24" selection-start-column="24" selection-end-line="25" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/Registratie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+            <element signature="e#2259#2260#0" expanded="true" />
+            <element signature="e#2305#2306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registreren.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/commonNavbar.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/rest/LocationRestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+        <state relative-caret-position="181">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/GebruikerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/gebruikersOverzicht.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/LocatieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/persistence/EntityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/service/BoekingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1383#1384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/BoekingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/repository/LocatieRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding>
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/BoekingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="148" column="27" lean-forward="true" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/thomasmore/travelmore/controller/LocatieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/locatiesBeheren.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="20" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
         </state>
       </provider>
     </entry>

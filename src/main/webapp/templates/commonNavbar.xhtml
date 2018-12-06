@@ -26,12 +26,16 @@
                 <p:menuitem value="Login" url="../travelmore/inloggen.xhtml" icon="ui-icon-close" />
             </c:if>
 
-            <c:if test='#{session.getAttribute("naam") != null}'>
-                <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-document" />
+            <c:if test='#{session.getAttribute("isAdmin") == true}'>
+                <p:menuitem value="Gebruikers beheren" url="../travelmore/gebruikersOverzicht.xhtml" icon="ui-icon-person" />
             </c:if>
 
             <c:if test='#{session.getAttribute("isAdmin") == true}'>
-                <p:menuitem value="Gebruikers beheren" url="../travelmore/gebruikersOverzicht.xhtml" icon="ui-icon-person" />
+                <p:menuitem value="Locaties beheren" url="../travelmore/locatiesBeheren.xhtml" icon="ui-icon-person" />
+            </c:if>
+
+            <c:if test='#{session.getAttribute("naam") != null}'>
+                <p:menuitem value="Mijn boekingen" url="../travelmore/mijnBoekingen.xhtml" icon="ui-icon-document" />
             </c:if>
 
             <c:if test='#{session.getAttribute("naam") != null}'>
