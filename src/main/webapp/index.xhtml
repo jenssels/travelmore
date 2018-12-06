@@ -26,13 +26,13 @@
             <div class="mainpage">
                 <div class="container">
                     <br/>
-                    <h4>Op zoek naar de zon?</h4>
+                    <h4>Ticket naar de zon?</h4>
                     <h:form id="filterReizen">
                             <p:panelGrid styleClass="ui-noborder" style="width: 100%">
 
                                 <p:row>
                                     <p:column style="width: 25%">
-                                        <h:outputLabel for="vertrekLocatie" value="Vertrek locatie:"/>
+                                        <h:outputLabel for="vertrekLocatie" value="Vertrek vanuit:"/>
                                     </p:column>
                                     <p:column style="width: 25%">
                                         <h:selectOneMenu style="width: 100%" id="vertrekLocatie" value="#{reisController.zoekVertrekLocatie}"
@@ -57,14 +57,14 @@
 
                                 <p:row>
                                     <p:column style="width: 25%">
-                                        <p:outputLabel for="startDatum" value="Start datum:"/>
+                                        <p:outputLabel for="startDatum" value="Startdatum:"/>
                                     </p:column>
                                     <p:column style="width: 25%">
                                         <p:calendar style="width: 100%;" inputStyle="width: 100%;" id="startDatum" value="#{reisController.zoekStartDatum}"
                                                     pattern="dd-MM-yyyy" mask="true"/>
                                     </p:column>
                                     <p:column style="width: 25%">
-                                        <p:outputLabel for="eindDatum" value="Eind datum:"/>
+                                        <p:outputLabel for="eindDatum" value="Einddatum:"/>
                                     </p:column>
                                     <p:column style="width: 25%">
                                         <p:calendar style="width: 100%;" inputStyle="width: 100%;" id="eindDatum" value="#{reisController.zoekEindDatum}" pattern="dd-MM-yyyy"
@@ -74,19 +74,19 @@
 
                                 <p:row>
                                     <p:column style="width: 25%">
-                                        <h:outputLabel for="budget" value="Budget per persoon:"/>
+                                        <h:outputLabel for="budget" value="Prijs per persoon:"/>
                                     </p:column>
                                     <p:column style="width: 25%">
                                         <p:inputText style="width: 100%" id="budget" converterId="javax.faces.Double"
                                                      value="#{reisController.zoekBudget}"/>
                                     </p:column >
                                     <p:column style="width: 25%">
-                                        <h:outputLabel for="transportType" value="Transport:"/>
+                                        <h:outputLabel for="transportType" value="Vervoermiddel:"/>
                                     </p:column>
                                     <p:column style="width: 25%">
                                         <h:selectOneMenu style="width: 100%" id="transportType" value="#{reisController.zoekTransportMiddelType}"
                                                          converter="omnifaces.SelectItemsConverter">
-                                            <f:selectItem itemLabel="Alle transport types" noSelectionOption="true"/>
+                                            <f:selectItem itemLabel="Alle vervoermiddelen" noSelectionOption="true"/>
                                             <f:selectItems value="#{transportmiddeltypeController.transportmiddeltypes}"
                                                            var="entity" itemLabel="#{entity.naam}" itemValue="#{entity}"/>
                                         </h:selectOneMenu>
@@ -99,7 +99,7 @@
                                     <p:column style="width: 25%"> </p:column>
                                     <p:column style="width: 25%">
                                         <h:commandButton class="btn btn-secondary btn-sm w-50" value="Zoeken" action="#{reisController.zoek()}"/>
-                                        <h:commandButton class="btn btn-outline-secondary btn-sm w-50" value="Reset" action="#{reisController.reset()}"/>
+                                        <h:commandButton class="btn btn-outline-dark btn-sm w-50" value="Reset" action="#{reisController.reset()}"/>
                                     </p:column>
                                 </p:row>
                                 </p:panelGrid>
@@ -109,11 +109,11 @@
 
                     <h4>Ons aanbod</h4>
                     <p:dataTable var="reis" value="#{reisController.reizen}" id="reisDataTable">
-                        <p:column headerText="Reisgegevens" width="40%">
+                        <p:column headerText="Reisgegevens" width="50%">
                             <h:outputText value="Vertrek vanuit: #{reis.vertreklocatie.naam}"/><br/>
                             <h:outputText value="Bestemming: #{reis.aankomstlocatie.naam}"/><br/>
-                            <h:outputText value="Periode: #{reis.getBeginDatumString()} tot #{reis.getEindDatumString()}"/><br/>
-                            <h:outputText value="Transport: #{reis.transportmiddel.naam}"/><br/>
+                            <h:outputText value="Periode: van #{reis.getBeginDatumString()} tot #{reis.getEindDatumString()}"/><br/>
+                            <h:outputText value="Vervoermiddel: #{reis.transportmiddel.naam}"/><br/>
                         </p:column>
                         <p:column headerText="Prijs per persoon">
                             <h:outputText value="€#{reis.prijs}"/>
@@ -123,7 +123,7 @@
                         </p:column>
                         <p:column headerText="Boek nu!">
                             <h:form id="boekingForm">
-                                <h:commandButton class="btn btn-secondary btn-sm" value="Boeken"
+                                <h:commandButton class="btn btn-secondary w-100" value="Reis boeken"
                                                  rendered='#{session.getAttribute("naam") != null and reisController.getVrijePlaatsen(reis.id) > 0}'
                                                  action="#{boekingController.boekingForm(reis.id)}"/>
                                 <h:outputText rendered='#{session.getAttribute("naam") == null}'

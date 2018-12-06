@@ -16,11 +16,11 @@
                     <br/>
                     <h4>Mijn boekingen</h4>
                     <p:dataTable var="boeking" value="#{boekingController.boekingen}" id="boekingDataTable">
-                        <p:column headerText="Reisgegevens" width="40%">
+                        <p:column headerText="Reisgegevens" width="50%">
                             <h:outputText value="Vertrek vanuit: #{boeking.reis.vertreklocatie.naam}"/><br/>
                             <h:outputText value="Bestemming: #{boeking.reis.aankomstlocatie.naam}"/><br/>
-                            <h:outputText value="Periode: #{boeking.reis.beginDatumString} tot #{boeking.reis.eindDatumString}"/><br/>
-                            <h:outputText value="Transport: #{boeking.reis.transportmiddel.naam}"/><br/>
+                            <h:outputText value="Periode: van #{boeking.reis.beginDatumString} tot #{boeking.reis.eindDatumString}"/><br/>
+                            <h:outputText value="Vervoermiddel: #{boeking.reis.transportmiddel.naam}"/><br/>
                             <h:outputText value="Prijs per persoon: €#{boeking.reis.prijs}"/><br/>
                         </p:column>
                         <p:column headerText="Aantal personen">
@@ -36,7 +36,7 @@
                             <h:form id="boekingForm">
                                 <h:commandButton class="btn btn-secondary btn-sm w-100" value="Betalen" rendered="#{boeking.isBetaald() == false}"
                                                  action="#{boekingController.betalingsForm(boeking.id)}"/>
-                                <h:commandButton class="btn btn-outline-secondary btn-sm w-100" value="Verwijderen"
+                                <h:commandButton class="btn btn-outline-dark btn-sm w-100" value="Verwijderen"
                                                  action="#{boekingController.verwijder(boeking.id)}"/>
                             </h:form>
                         </p:column>
